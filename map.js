@@ -5,6 +5,7 @@ $(document).ready(function () {
             search: true,
             infowindow: true,
             tooltip: true,
+            https: true,
             loaderControl: false,
             layer_selector: true,
             detectRetina: true,
