@@ -82,10 +82,36 @@ div.cartodb-popup .jspPane {
 #map .cartodb-layer-selector-box {
 	position: absolute !important;
 	float: left !important;
-	margin: 50px 0 0 60px !important;
+	margin: 10px 0 0 70px !important;
 	border: none !important;
 	box-shadow: 0 1px 5px rgba(0,0,0,.65) !important;
 	z-index: 100 !important;
+}
+
+div.cartodb-layer-selector-box div.cartodb-dropdown {
+	border: none;
+	box-shadow: 0 1px 5px rgba(0,0,0,.65);
+	z-index: 100;
+}
+
+div.cartodb-layer-selector-box a.layers {
+	color: #666;
+}
+
+div.cartodb-layer-selector-box a.layers .count {
+	background-color: #999;
+}
+
+div.cartodb-layer-selector-box a.layers:hover {
+	color: #666 !important;
+	background-color: #f4f4f4;
+	display: block;
+	height: 17px;
+    border-radius: 4px;
+}
+
+div.cartodb-layer-selector-box a.layers .count {
+	background-color: #999 !important;
 }
 
 div.cartodb-legend {

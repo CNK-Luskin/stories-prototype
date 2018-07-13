@@ -2,7 +2,7 @@
 $(document).ready(function () {
     cartodb.createVis('map', 'https://uducla.carto.com/u/uducla/api/v2/viz/664b2ba5-b804-4fd8-b734-c813d78242de/viz.json', {
             shareable: false, 
-            search: true,
+            search: false,
             infowindow: true,
             tooltip: true,
             https: true,
