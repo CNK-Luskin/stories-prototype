@@ -54,7 +54,7 @@ vizjson({
             "user_name":"uducla",
             "maps_api_template":"http://{user}.carto.com:80",
             "sql_api_template":"http://{user}.carto.com:80",
-            "tiler_protocol":"http",
+            "tiler_protocol":"https",
             "tiler_domain":"carto.com",
             "tiler_port":"80",
             "sql_api_protocol":"http",
