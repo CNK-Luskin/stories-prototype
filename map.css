@@ -130,6 +130,7 @@ div.cartodb-legend {
 	margin-top: -60px !important;
 }
 
+
 /* overrides default style for zoom icons */
 #map .cartodb-zoom {
 	position: absolute;
