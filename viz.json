@@ -28,8 +28,8 @@ vizjson({
          "options":{  
             "type":"Tiled",
             "category":"CARTO",
-            "urlTemplate":"https://{s}.basemaps.cartocdn.com/rastertiles/light_nolabels/{z}/{x}/{y}.png",
-            "urlTemplate2x":"https://{s}.basemaps.cartocdn.com/rastertiles/light_nolabels/{z}/{x}/{y}@2x.png",
+            "urlTemplate":"", //delete this URL
+            "urlTemplate2x":"", //delete this URL
             "subdomains":"abcd",
             "minZoom":"0",
             "maxZoom":"18",

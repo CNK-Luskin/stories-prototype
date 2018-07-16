@@ -168,6 +168,10 @@ div.cartodb-legend {
 	margin-top: -60px !important;
 }
 
+.base {
+	z-index: -1 !important;
+}
+
 
 /* overrides default style for zoom icons */
 #map .cartodb-zoom {
