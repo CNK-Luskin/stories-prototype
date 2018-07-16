@@ -51,6 +51,15 @@ div.cartodb-legend.category ul li, div.cartodb-legend.color ul li, div.cartodb-l
 	height: 100% !important;
 }
 
+#map .cartodb-popup-content a {
+	color: #9b40f4;
+	font-style: italic;
+}
+
+#map .cartodb-popup-content a:hover {
+	color: #999;
+}
+
 #map .cartodb-infowindow {
 	width: 50% !important;
 	min-width: 330px !important;

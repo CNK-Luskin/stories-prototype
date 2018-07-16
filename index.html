@@ -54,8 +54,10 @@
 	  <a href="#close" class="cartodb-popup-close-button close" onclick="popupclose();">x</a>
 		  <div class="cartodb-popup-content-wrapper">
 		    <div class="cartodb-popup-content">
-		    	<h2 style="color: #9b40f4;"> {{name}} </h2> 
-		    	<h3> {{address}} </h3>
+		    	<h2 style="color: #9b40f4; line-height:1.5;"> {{name}} </h2> 
+		    	<h3><a href="http://maps.google.com/maps?q=&layer=c&cbll={{lat}},{{lng}}" target="_blank"> 
+		    		{{address}} </a>
+		    	</h3>
 		    		<hr style="height:0px; visibility:hidden;" />
 		    	<p> {{textlong}} </p>
 		    		<hr style="height:0px; visibility:hidden;" />
