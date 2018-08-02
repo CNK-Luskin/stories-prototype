@@ -12,7 +12,7 @@ L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution" target="_blank">CARTO</a>, <a href="https://data.cityofnewyork.us/City-Government/Community-Districts/yfnk-k7r4/data" target="_blank">NYC</a> <a href="https://data.cityofnewyork.us/City-Government/City-Council-Districts/yusd-j4xi/data" target="_blank">Open Data</a>'
       }).addTo(map);
 
-/* INTERACTION
+// INTERACTION
 
 
 function highlightFeature(e) {
@@ -21,17 +21,28 @@ function highlightFeature(e) {
 
     layer.setStyle({
         fillOpacity: 1,
-        radius: 8
+        color: "#B9F0FD"
     });
 
-    $(e.target.getElement()).attr('id', 'active');
-
-    $('.leaflet-interactive').not('#active').css("fill","#BBB").css("fillOpacity","0.45").css("stroke","#999");
-
-    if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-        layer.bringToFront();
+    // Link map feature hover events with buttons
+    switch (layer.feature.properties.Name) {
+        case "Boyle Heights":
+            $('#boyle_heights').addClass('hover');
+            break;
+        case "Central / West Long Beach":
+            $('#long_beach').addClass('hover');
+            break;  
+        case "South Los Angeles":
+            $('#south_la').addClass('hover');
+            break;    
     }
+}
 
+function highlightFromButton(area) {
+    area.setStyle({
+        fillOpacity: 1,
+        color: "#B9F0FD"
+    });
 }
 
 function resetHighlight(e) {
@@ -39,14 +50,21 @@ function resetHighlight(e) {
     var layer = e.target;
 
     layer.setStyle({
-        fillOpacity: 0.6,
-        radius: 7
+        fillOpacity: 0.8,
+        color: "#8965B2"
     });
 
-    $(e.target.getElement()).removeAttr("id");
+    $('#boyle_heights').removeClass('hover');
+    $('#long_beach').removeClass('hover');
+    $('#south_la').removeClass('hover');
 
-    $('.leaflet-interactive').css("fill","").css("fillOpacity","").css("stroke","");
-    
+}
+
+function resetFromButton(area) {
+    area.setStyle({
+        fillOpacity: 0.8,
+        color: "#8965B2"
+    });
 }
 
 function onEachFeature(feature, layer) {
@@ -56,6 +74,13 @@ function onEachFeature(feature, layer) {
     });
 } 
 
+
+// Link button hover events with map features
+$('#boyle_heights').hover(function(){highlightFromButton(boyle_heights);},function(){resetFromButton(boyle_heights);});
+$('#long_beach').hover(function(){highlightFromButton(long_beach);},function(){resetFromButton(long_beach);});
+$('#south_la').hover(function(){highlightFromButton(south_la);},function(){resetFromButton(south_la);});
+
+/*
 
 function pointToLayer(feature, latlng) {
     return L.circleMarker(latlng, 
@@ -85,15 +110,18 @@ function style(feature) {
 }
 
 var boyle_heights = L.geoJson(boyleHeights, {
-    style: style
+    style: style,
+    onEachFeature: onEachFeature
 }).addTo(map);
 
 var long_beach = L.geoJson(longBeach, {
-    style: style
+    style: style,
+    onEachFeature: onEachFeature
 }).addTo(map);
 
-var south_LA = L.geoJson(southLA, {
-    style: style
+var south_la = L.geoJson(southLA, {
+    style: style,
+    onEachFeature: onEachFeature
 }).addTo(map);
 
 // POP UPS 

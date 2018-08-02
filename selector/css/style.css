@@ -62,6 +62,13 @@ b {
     letter-spacing: 0.7;
 }
 
+.selector-button:hover, .selector-button.hover {
+    opacity: 1;
+    color: #B9F0FD;
+    /*font-weight: 500;*/
+}
+
+
 #about {
     display: none;
     min-height: 100%;
