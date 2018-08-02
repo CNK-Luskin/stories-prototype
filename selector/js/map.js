@@ -80,23 +80,6 @@ $('#boyle_heights').hover(function(){highlightFromButton(boyle_heights);},functi
 $('#long_beach').hover(function(){highlightFromButton(long_beach);},function(){resetFromButton(long_beach);});
 $('#south_la').hover(function(){highlightFromButton(south_la);},function(){resetFromButton(south_la);});
 
-/*
-
-function pointToLayer(feature, latlng) {
-    return L.circleMarker(latlng, 
-        {
-            radius: 7,
-            color: getBorder(feature.properties.Symbol),
-            fillColor: getColor(feature.properties.Symbol),
-            weight: 1.5,
-            opacity: 0.6,
-            fillOpacity: 0.6
-        }
-    );
-}
-
-*/
-
 
 // MAP DATA
 
@@ -125,6 +108,31 @@ var south_la = L.geoJson(southLA, {
 }).addTo(map);
 
 // POP UPS 
+
+boyle_heights.bindPopup(function (layer) {
+    return L.Util.template(
+        `Sample Pop 
+        Up`
+        )});
+
+long_beach.bindPopup(function (layer) {
+    return L.Util.template(
+        `Sample Pop 
+        Up`
+        )});
+
+south_la.bindPopup(function (layer) {
+    return L.Util.template(
+        `Sample Pop 
+        Up`
+        )});
+
+function testy(){
+    boyle_heights.openPopup();
+}
+
+
+// Link button click events with map pop ups!!
 
 /*
 
@@ -227,119 +235,5 @@ map.on('popupclose', function(e) {
 // OTHER CONTROLS
 
 // L.control.zoom({position:'topright'}).addTo(map);
-
-// ABOUT PAGE
-
-showAbout = false;
-
-var toggleAbout = function(){
-        if(showAbout === true){
-           $('#about').hide(); 
-           showAbout = false;
-        }
-        else{
-           $('#about').show(); 
-           showAbout = true;
-        }
-    }
-
-map.on('layeradd', function(e) { document.getElementById('about').innerHTML = 
-    '<div class="about-banner">' +
-    '<button class="about-close-button" onclick="toggleAbout();" style="outline: none;"><b>✕</b></button>' +
-    '<div id="logo-596"><a href="http://596acres.org/" target="_blank"><img src="images/596.png" width="65px"></a></div></div>' +
-'<h3>ABOUT</h3>' + 
-    'Since Mayor Bill de Blasio took office on January 1st, 2014, the City of New York has sold <b>' + ODL_sold.getLayers().length + 
-    '</b> city-owned lots of land to housing developers for $1.00 each. ' + 
-        '<hr style="height:0px; visibility:hidden;" />' + 
-    'Some of this land has gone to organizations doing valuable and necessary work for the city—' + 
-    ' developing permanent homes for the extremely-low income, establishing ' + 
-    '<a href="https://www.dnainfo.com/new-york/20160823/east-village/bea-arthur-lgbt-homeless-shelter-slated-for-completion-feb-2017" target="_blank">shelters for LGBT youth</a>. ' +
-    'Some of this land has also gone to for-profit housing developers building ' + 
-    '<a href="http://www.nydailynews.com/new-york/hpd-plans-sell-prime-land-1-private-developer-article-1.2092855" target="_blank">market-rate apartments</a> ' + 
-    'or "affordable" units too expensive for locals to live in. ' +
-    'And these sales are happening with <a href="https://citylimits.org/2016/06/14/cityviews-city-giving-away-land-with-little-public-discussion/" target="_blank">few opportunities</a> for input from those most impacted. ' +
-    'To date, only <b>one</b> of these lots has become permanently affordable housing.' +
-        '<hr style="height:0px; visibility:hidden;" />' + 
-    'The ONE DOLLAR LOTS project by <a href="http://596acres.org/" target="_blank">596 Acres</a> is an archive of these $1 lot sales. It is also a place for organizers and local residents to get information about ' + 
-    'pending sales that may disrupt their communities and to imagine better uses for cheap public land. <b>' + ODL_pending.getLayers().length + ' </b> lots are still pending final sale.' + 
-'<h3>METHODOLOGY</h3>' +
-    'Any time the City plans to sell public land for $1, it posts a "Disposition Notice" in the ' +
-    'online <a href="https://a856-cityrecord.nyc.gov/Search/AdvancedCity" target="_blank">City Records database</a>. We tracked ' + 
-    'all of these notices posted since January 2014 and we added them to our "pending" list of $1 sales. Sometimes, we also found potential $1 sales in ' + 
-    '<a href="https://www.nycedc.com/about-nycedc/financial-public-documents" target="_blank">EDC board meeting mintues</a>.' +
-        '<hr style="height:0px; visibility:hidden;" />' + 
-    'For each pending sale, we used the <a href="https://a836-acris.nyc.gov/DS/DocumentSearch/BBL" target="_blank">ACRIS database</a> to check if the sale had taken place. ' + 
-    'A deed tells us when the land was sold and who it was sold to. Each time we found a deed, we transferred the $1 lot from our "pending" list to our "sold" list.' + 
-        '<hr style="height:0px; visibility:hidden;" />' + 
-    'Also on <a href="https://a836-acris.nyc.gov/DS/DocumentSearch/BBL" target="_blank">ACRIS</a>, ' +
-    'each deed is posted along with a regulatory agreement that spells out certain restrictions on how the developer must use the land. This is crucial information: these agreements include ' +
-    'what target incomes any new housing must be built for and how long these affordability restrictions last— good indicators of how useful new housing may be for the local community.' + 
-        '<hr style="height:0px; visibility:hidden;" />' + 
-    'Take a look at the raw data <a href="https://docs.google.com/spreadsheets/d/1D7TIpWiOHXa_--9rlAB7zI146C8tMl6756w1FBu6Pfw/edit?usp=sharing" target="_blank">here</a>.' +
-'<h3>USING THE MAP</h3>' + 
-    'In the upper-right, click on the map controls to toggle different layers on and off, zoom in and out, and locate an address.' + 
-        '<hr style="height:0px; visibility:hidden;" />' + 
-    'Click on a point on the map to view all details regarding a $1 sale. To see general demographic information about the area the lot is in, click on the "Community District" link. ' + 
-    'To contact the local Council Member, click on the "City Council District" link.' +
-        '<hr style="height:0px; visibility:hidden;" />' + 
-    'When clicking on a point, make sure to look at the "Housing Restrictions" section and compare it to "Community District Income." This gives an idea of how useful this land sale may be to locals.' + 
-    ' Keep in mind: <b> a non-profit developer is not necessarily serving the community well</b>. If you need more detailed information on housing restrictions, click on the source link below the restrictions to see the proposal or agreement regarding the sale.' +
-'<h3>WHY IT MATTERS</h3>' +
-    'Public land is a priceless resource. Historically, it has been used by residents of NYC to create the places we know we need to survive and thrive. ' + 
-    'Kept public or given away cheaply to groups organized specifically to ensure long-term public benefit— like community land trusts— ' +
-    'public land has become deeply and permanently affordable housing, community, cooperative, cultural and commercial spaces, and so much more. ' + 
-    'Public land is a great starting place for actualizing the city as commons!' +  
-        '<hr style="height:0px; visibility:hidden;" />' + 
-    'These vacant city-owned lots that have been sold for $1 are vacant due to decades of institutionally racist land use policies including ' +
-    '<a href="https://native-land.ca" target="_blank">settler colonialism</a>, ' +
-    '<a href="https://dsl.richmond.edu/panorama/redlining/#loc=5/39.105/-94.583&amp;opacity=0.8" target="_blank">redlining</a>, ' +
-    'and <a href="http://urbanreviewer.org" target="_blank">Urban Renewal Area clearance</a>. ' +
-    'Many of these lots languish in the middle of active blocks primarily in low-income neighborhoods of color, and they exist for years fenced off by the government but otherwise not maintained. '+ 
-    'Fast forward to 2014, and the city is selling them without input from the people who have long dealt with the real life impact of abandoned land in their lives. ' +
-    'This squanders potential opportunities for transforming historical violence and for creating lasting, adaptive public benefit.' +
-'<h3>HELPFUL LINKS</h3>' +
-    '• <a href="https://livinglotsnyc.org/" target="_blank">LivingLots</a>, ' + 
-    'a web tool that supports local organizing campaigns to turn vacant lots into community-stewarded land. Created by <a href="http://596acres.org/" target="_blank">596 Acres</a>.' +
-        '<hr style="height:0px; visibility:hidden;" />' + 
-    '• <a href="https://nycommons.org/" target="_blank">NYCommons</a>, ' + 
-    'a map of different places the public owns with information for local community land access organizing, including any pending sales. ' +
-    'Created through collaboration between <a href="http://www.commoncause.org/states/new-york/" target="_blank">Common Cause/NY</a>, the <a href="http://cdp.urbanjustice.org/" target="_blank">Community Development Project at the Urban Justice Center</a>, and <a href="/admin/page/page/3/change/596acres.org" target="_blank">596 Acres</a>.' + 
-        '<hr style="height:0px; visibility:hidden;" />' + 
-    '• <a href="http://lghttp.58547.nexcesscdn.net/803F44A/images/nycss/images/uploads/pubs/housing_new_york_-_FINAL_9_20_17.pdf" target="_blank">"Taking Stock" report</a>, ' +
-    'a data-driven independent review of common concerns surrounding the City&#8217;s Housing New York plan, by <a href="http://www.cssny.org/" target="_blank">Community Service Society</a>.' +
-'<h3>CONTACT US</h3>' +
-    'To ask questions, suggest changes, or get help organizing to change how dollar sales are impacting your neighborhood and city, contact <a href="http://596acres.org/" target="_blank">596 Acres</a>:' +
-        '<hr style="height:0px; visibility:hidden;" />' + 
-    '<b>Email:</b> <a href="mailto:organizers@596acres.org" target="_blank">organizers@596acres.org</a><br>' +
-    '<b>Phone:</b> (718) 316-6092<br>' + 
-    '<b>Website:</b> <a href="http://596acres.org/" target="_blank">596acres.org</a>' +
-'<h3>DONATE</h3>' +
-    '596 Acres relies on your donations to build and maintain tools like this one. You can donate to us through our <a href="http://596acres.org/donate/" target="_blank">donations page</a>.' +
-'<h3>CREDITS</h3>' +
-    'This map was created by <a href="http://596acres.org/" target="_blank">596 Acres</a> with help from some of our friends and partners.' +
-        '<hr style="height:0px; visibility:hidden;" />' +
-    '<b>Methodology:</b><br>' + 
-    '<span class="ita">• Tiera Mack</span>, Masters in Urban Planning student<br>' +
-    '<span class="ita">• Paula Z. Segal</span>, Esq., <a href="https://cdp.urbanjustice.org/cdp-equitable-neighborhoods" target="_blank">Equitable Neighborhoods Practice</a>, Community Development Project @eqneighborhoods<br> ' +
-    '<span class="ita">• Cea Weaver</span>, Research & Policy Director, <a href="http://nycommunities.org" target="_blank">New York Communities for Change</a><br>' +
-        '<hr style="height:0px; visibility:hidden;" />' +
-    '<b>Data gathering:</b><br>' +
-    '<span class="ita">• Tiera Mack</span><br>' +
-    '<span class="ita">• Sam Raby</span>, Web Tools Developer Intern, <a href="http://596acres.org/" target="_blank">596 Acres</a><br>' +
-    '<span class="ita">• Paula Z. Segal</span><br>'+ 
-    '<span class="ita">• Cea Weaver</span><br>' + 
-        '<hr style="height:0px; visibility:hidden;" />' +
-    '<b>Web tool development:</b><br>' +
-    '<span class="ita">• Sam Raby</span><br>' +
-        '<hr style="height:0px; visibility:hidden;" />' +
-    '<b>Special thanks:</b><br>' +
-    '<span class="ita">• Stephanie Alvarado</span> and <span class="ita">Mara Kravitz</span>, Directors of Advocacy and Partnerships, <a href="http://596acres.org/" target="_blank">596 Acres</a><br>' +
-    '<span class="ita">• Oksana Mironova</span>, <a href="http://www.cssny.org/" target="_blank">CSS</a><br> ' + 
-    '<span class="ita">• Stephanie Sosa</span> and <span class="ita">Christopher Walters</span>, <a href="https://anhd.org/" target="_blank">ANHD</a>' +
-'<h3>LICENSE</h3>' +
-    'This site is licensed through Creative Commons under the ' + 
-    '<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a> license.' +
-''; }); 
-
 
  
