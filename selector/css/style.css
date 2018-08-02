@@ -1,0 +1,380 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0px;
+    height: 100%;
+}
+
+b {
+    font-weight: 700;
+}
+
+.tight-line {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.ita {
+    font-style: italic;
+}
+
+.leaflet-popup-pane a:hover {
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+#about a:hover {
+    font-weight: 700;
+    letter-spacing: 0;
+}
+
+#mainmap {
+	width: 100%; 
+    height: 100%;
+    padding: 0%;
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: 0.2px;
+    position: relative;
+}
+
+#button-panel {
+    position: absolute;
+    z-index: 500;
+    width: 100%;
+    height: 100px;
+}
+
+.selector-button {
+    width: 25%;
+    margin-left: 4%;
+    margin-right: 4%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    height: 48px;
+    border: none;
+    border-radius: 30px;
+    background-color: #8965B2;
+    opacity: 0.9;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 0.7;
+}
+
+#about {
+    display: none;
+    min-height: 100%;
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: 0.2px;
+    position: relative;
+    overflow: scroll;
+    overflow-y: hidden;
+    background-color: #eee;
+    z-index: 9000;
+    padding: 90px 30px 30px 30px;
+    color: #47473e;
+    font-size: 1.2em;
+}
+
+#about a{
+  color: #47473e;  
+}
+
+.about-button {
+    left: 10px;
+    top: 80px;
+    position: absolute;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    color: #47473e;
+    z-index: 999;
+    font-size: 1.15em;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.6px;
+}
+
+.about-button:hover {
+    font-weight: 700;
+}
+
+.about-close-button {
+    right: 20px;
+    top: 10px;
+    position: absolute;
+    padding: 0px;
+    display: block;
+    font-size: 32px;
+    z-index: 10000;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    color: #47473e;
+}
+
+.about-close-button:hover {
+    color: #000;
+}
+
+.about-banner {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 9500;
+    background-color: #eee;
+}
+
+#title {
+    position: fixed;
+    z-index: 10000;
+    left: 10px;
+    top: 10px;
+}
+
+.byline {
+    position: absolute; 
+    z-index: 999;
+    left: 5px;
+    bottom: 5px;
+    opacity: 0.7;
+    display: block;
+}
+
+.byline img:hover {
+  width: 68px;
+}
+
+.box-logo {
+    float: left;
+    border-radius: 10px;
+    border: 4px solid #47473e; 
+    width: 50px;
+    height: 50px;
+}
+
+.box-logo-text {
+    position: relative;
+    left: 7px;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    letter-spacing: -3;
+    color: #47473e;
+}
+
+.box-logo-symbol {
+    font-size: 20px;
+    position: relative;
+    bottom: 10px;
+}
+
+.title-text {
+    display: inline;
+    font-size: 30px;
+    position: relative;
+    left: 9px;
+    top: 0px;
+    color: #47473e;
+    letter-spacing: 0.6px;
+    font-weight: 600;
+}
+
+.subtitle {
+    position: relative;
+    z-index: 1000;
+    left: 80px;
+    top: 48px;
+    font-size: 1.15em;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.6px;
+    color: #47473e;
+}  
+
+#logo {
+    position: absolute;
+    z-index: 1000;
+    left: 10px;
+    top: 10px;
+}
+
+#logo-596 { 
+    right: 65px;
+    top: 10px;
+    position: absolute;
+    z-index: 10000;
+    opacity: 0.72;
+    display: block;
+}
+
+#logo-596:hover {
+    opacity: 1;
+}
+
+#active {
+}
+
+.leaflet-control-layers-expanded {
+    font-size: 14px;
+}
+
+.leaflet-top.leaflet-left {
+    top: 90px;
+}
+
+.leaflet-bar a, .leaflet-bar a:hover {
+    width: 36px !important;
+    height: 36px !important;
+    line-height: 36px !important;
+}
+
+table {
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+tr, td { 
+    padding-right: 10px !important;
+}
+
+tr {
+    border-bottom: solid 1px black;
+}
+
+.btn-grey {
+    display: inline-block;
+    color: #fff !important;
+    padding: 2px 8px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.btn-grey:hover {
+    font-weight: 750;
+}
+
+input[type="checkbox"] { 
+    display: none; 
+}
+
+.leaflet-control-layers-overlays span {
+    border-radius: 4px;
+    color: #47473e;
+    cursor: pointer;
+    display: block;
+    font-weight: 300;
+    text-align: left;
+    padding: 2px 8px;
+    background-color: #E2E2E2;
+    margin-top: 5px;
+    -moz-box-shadow:    inset 0 0 2px #666;
+    -webkit-box-shadow: inset 0 0 2px #666;
+    box-shadow:         inset 0 0 2px #666;
+}
+
+.layer-selected {
+    background-color: #FFF !important;
+    -moz-box-shadow:    inset 0 0 0.5px #666 !important;
+    -webkit-box-shadow: inset 0 0 0.5px #666 !important;
+    box-shadow:         inset 0 0 0.5px #666 !important;
+}
+
+.leaflet-control-layers-overlays span:hover {
+    background-color: #CCC;
+}
+
+.leaflet-control-layers-list {
+    margin-bottom: 0px;
+}
+
+.leaflet-control-layers-expanded {
+    background-color: rgba(1,1,1,0);
+    box-shadow: none;
+    padding: 6px !important;
+    font-size: 1.1em;
+}
+
+.legend {
+    background: rgba(256,256,256,1);
+    border: 0px solid #47473e;
+    color: #333;
+    border-radius: 4px;
+    bottom: 30px;
+    right: 10px;
+    padding: 5px;
+    position: absolute;
+    z-index: 500;
+    font-size: 1.1em;
+    font-weight: 300;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+}
+
+.legend-label {
+}
+
+.i {
+    border-radius: 10px;
+    display: inline-block;
+    height: 12px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-bottom: -2px;
+    width: 12px;
+    opacity: 0.7;
+}
+
+/* Mobile */ 
+
+@media (max-width: 500px) {
+    .title-text {
+        top: 5px;
+        font-size: 16px;
+        display: -webkit-box;   /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+        display: -ms-flexbox;   /* TWEENER - IE 10 */
+        display: -webkit-flex;  /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+        display: flex;          /* NEW, Spec - Firefox, Chrome, Opera */
+    }
+
+    .subtitle {
+        display: none !important;  
+    }
+
+    .byline {
+        bottom: 24px;
+    }
+}
+
+@media (min-width: 650px) {
+    #title {
+        display: block !important;
+    }
+
+    .legend {
+        display: block !important;
+    }
+
+    .leaflet-control-container {
+        display: block !important;
+    }
+
+    .subtitle {
+        display: block !important;
+    }
+    
+    .about-button {
+        display: block !important;
+    }
+
+    .byline {
+        display: block !important;
+    }
+}
