@@ -41,9 +41,10 @@ b {
 
 #button-panel {
     position: absolute;
+    top: 65px; /* CHANGE TO RESPOND TO BANNER HEIGHT */
     z-index: 500;
     width: 100%;
-    height: 100px;
+    height: 0px;
 }
 
 .selector-button {

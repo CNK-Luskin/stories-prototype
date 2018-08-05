@@ -127,113 +127,12 @@ south_la.bindPopup(function (layer) {
         Up`
         )});
 
-function testy(){
-    boyle_heights.openPopup();
-}
+// Link button click events with map pop ups
+
+$('#boyle_heights').on("click",function() {boyle_heights.openPopup();});
+$('#long_beach').on("click",function() {long_beach.openPopup();});
+$('#south_la').on("click",function() {south_la.openPopup();});
 
 
-// Link button click events with map pop ups!!
-
-/*
-
-function numberWithCommas(x) {
-    x = x.toString();
-    var pattern = /(-?\d+)(\d{3})/;
-    while (pattern.test(x))
-        x = x.replace(pattern, "$1,$2");
-    return x;
-}
-
-function edcText(x) {
-    if (x == "EDC Board Meeting Minutes") {
-        return "Notes from an EDC board meeting on "
-    }
-    else {
-        return "A City Record notice posted on "
-    }
-}
-
-function edcButton(x) {
-    if (x == "EDC Board Meeting Minutes") {
-        return "EDC meeting notes"
-    }
-    else {
-        return "City Record notice"
-    }
-}
-
-function shortenLandDisp(x) {
-    if (x == "Land Disposition Agreement") {
-        return "Land Disp. Agreement"
-    }
-    else { 
-        return x 
-    }
-}
-
-ODL_sold.bindPopup(function (layer) {
-    return L.Util.template('<h3>Sold for $1</h3>' 
-        + layer.feature.properties.Purchaser_Name + ', a ' + '<b style="color: ' + getTextColor(layer.feature.properties.Symbol) + ';">' + layer.feature.properties.Purchaser_Type + '</b>, bought this land from the city for one dollar on ' + layer.feature.properties.Date_Deed_Signed + '.<br>' +
-            '<table>' + 
-              '<tr><td>BBL</td><td>' + layer.feature.properties.Borough + ' block ' + layer.feature.properties.Block + ', lot ' + layer.feature.properties.Lot + '</td></tr>' + 
-              '<tr><td>Address</td><td>' + layer.feature.properties.Address + '</td></tr>' +
-              '<tr><td>Districts</td><td> <a target="_blank" href="https://communityprofiles.planning.nyc.gov/' + layer.feature.properties.Borough.toLowerCase() + '/' + layer.feature.properties.Community_District + '" style="color: ' + getTextColor(layer.feature.properties.Symbol) + ';">' +
-                    layer.feature.properties.Borough + " Community District " + layer.feature.properties.Community_District + '</a>, <br><a style="color: ' + getTextColor(layer.feature.properties.Symbol) + ' ;" target="_blank" href="https://council.nyc.gov/district-' + layer.feature.properties.Council_District + '/">' +
-                    'City Council District ' + layer.feature.properties.Council_District + '</a></td></tr>' +
-              '<tr><td>Housing Restrictions</td><td>' + layer.feature.properties.Details_and_Restrictions + '<br>&nbsp; — <a style="color:' + getTextColor(layer.feature.properties.Symbol) + ' ;" target="_blank" href="' + layer.feature.properties.Link_to_Restrictions_Source +'">' + layer.feature.properties.Restrictions_Source + '</a></td></tr>' + 
-              '<tr><td>Restriction Period</td><td>' + layer.feature.properties.Length_of_Restrictions + '</td></tr>' + 
-              '<tr><td>Community District Income</td><td>$' + numberWithCommas(layer.feature.properties.Community_District_Income) + ' median<br>(' + (layer.feature.properties.Community_District_Income/859).toFixed(0)+ '% AMI for household of three)</td></tr>' + 
-              '</table><hr style="height:0px; visibility:hidden;" />' +
-              '<a class="btn-grey" style="background-color:' + getTextColor(layer.feature.properties.Symbol) + ';" target="_blank" href="' + layer.feature.properties.Link_to_Proposed_Disposition + '">' + edcButton(layer.feature.properties.Source_of_Info) + '</a>' +
-              '<a class="btn-grey" style="background-color:' + getTextColor(layer.feature.properties.Symbol) + ';" target="_blank" href="' + layer.feature.properties.Link_to_Restrictions_Source + '">' + shortenLandDisp(layer.feature.properties.Restrictions_Source) + '</a>' +
-              '<a class="btn-grey" style="background-color:' + getTextColor(layer.feature.properties.Symbol) + ';" target="_blank" href="' + layer.feature.properties.Link_to_Deed + '">Deed</a>' +
-              '<a class="btn-grey" style="background-color:' + getTextColor(layer.feature.properties.Symbol) + ';" target="_blank" href="' + layer.feature.properties.Link_to_Zola + '">Detailed lot info (ZoLa)</a>');
-        });
-
-ODL_pending.bindPopup(function (layer) {
-    return L.Util.template('<h3>Pending Sale for $1</h3>' 
-        + edcText(layer.feature.properties.Source_of_Proposal) + layer.feature.properties.Date_Notice_was_Published + ' identified this lot as a <b style="color:#8865C3">potential $1 sale</b> and proposed ' +
-        layer.feature.properties.Purchaser_Name + ', a ' + layer.feature.properties.Purchaser_Type + ', as a buyer.' + 
-            '<table>' + 
-              '<tr><td>BBL</td><td>' + layer.feature.properties.Borough + ' block ' + layer.feature.properties.Block + ', lot ' + layer.feature.properties.Lot + '</td></tr>' + 
-              '<tr><td>Address</td><td>' + layer.feature.properties.Address + '</td></tr>' +
-              '<tr><td>Districts</td><td> <a target="_blank" href="https://communityprofiles.planning.nyc.gov/' + layer.feature.properties.Borough.toLowerCase() + '/' + layer.feature.properties.Community_District + '" style="color: ' + getTextColor(layer.feature.properties.Symbol) + ';">' +
-                    layer.feature.properties.Borough + " Community District " + layer.feature.properties.Community_District + '</a>, <br><a style="color: ' + getTextColor(layer.feature.properties.Symbol) + ' ;" target="_blank" href="https://council.nyc.gov/district-' + layer.feature.properties.Council_District + '/">' +
-                    'City Council District ' + layer.feature.properties.Council_District + '</a></td></tr>' +
-              '<tr><td>Current Use</td><td>' + layer.feature.properties.Land_Use + '</td></tr>' +
-              '<tr><td>Proposed Restrictions</td><td>' + layer.feature.properties.Details_and_Restrictions + '<br>&nbsp; — <a style="color:' + getTextColor(layer.feature.properties.Symbol) + ' ;" target="_blank" href="' + layer.feature.properties.Link_to_Restrictions_Source +'">' + layer.feature.properties.Restrictions_Source + '</a></td></tr>' + 
-              '<tr><td>Community District Income</td><td>$' + numberWithCommas(layer.feature.properties.Community_District_Income) + ' median<br>(' + (layer.feature.properties.Community_District_Income/859).toFixed(0)+ '% AMI for household of three)</td></tr>' + 
-              '</table><hr style="height:0px; visibility:hidden;" />' +
-              '<a class="btn-grey" style="background-color:' + getTextColor(layer.feature.properties.Symbol) + ';" target="_blank" href="' + layer.feature.properties.Link_to_Proposed_Disposition + '">' + edcButton(layer.feature.properties.Source_of_Proposal) + '</a>' +
-              '<a class="btn-grey" style="background-color:' + getTextColor(layer.feature.properties.Symbol) + ';" target="_blank" href="mailto:organizers@596acres.org">Contact to organize</a>' +
-              '<a class="btn-grey" style="background-color:' + getTextColor(layer.feature.properties.Symbol) + ';" target="_blank" href="' + layer.feature.properties.Link_to_Zola + '">Detailed lot info (ZoLa)</a>');
-        });
-
-map.on('popupopen', function(e) {
-    var location = map.project(e.popup._latlng); 
-    location.y -= e.popup._container.clientHeight/2;
-    map.panTo(map.unproject(location),{animate: true}); 
-    $(".legend").css("display","none");
-    $(".leaflet-control-container").css("display","none");
-    $("#title").css("display","none");
-    $(".subtitle").css("display","none");
-    $(".about-button").css("display","none");
-    $(".byline").css("display","none");
-});
-
-map.on('popupclose', function(e) {
-    $(".legend").css("display","block");
-    $(".leaflet-control-container").css("display","block");
-    $("#title").css("display","block");
-    $(".subtitle").css("display","block");
-    $(".about-button").css("display","block");
-    $(".byline").css("display","block");
-});
-
-*/
-
-// OTHER CONTROLS
-
-// L.control.zoom({position:'topright'}).addTo(map);
 
  
