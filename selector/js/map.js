@@ -1,6 +1,6 @@
 // BASEMAP
 
- var map = L.map('mainmap', {
+var map = L.map('mainmap', {
     center: [33.9, -118.23,], 
     zoom: 10,
     zoomControl: false
@@ -12,8 +12,76 @@ L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution" target="_blank">CARTO</a>, <a href="https://data.cityofnewyork.us/City-Government/Community-Districts/yfnk-k7r4/data" target="_blank">NYC</a> <a href="https://data.cityofnewyork.us/City-Government/City-Council-Districts/yusd-j4xi/data" target="_blank">Open Data</a>'
       }).addTo(map);
 
+
+// ABOUT PAGES
+
+var showAbout = false;
+
+function toggleMapInteraction() {
+    if (showAbout === true) {
+        $( "#button-panel" ).css( "pointer-events", "none");
+        map._handlers.forEach(function(handler) {
+                handler.disable();
+            });
+    }
+    else {
+        $( "#button-panel" ).css( "pointer-events", "auto");
+        map._handlers.forEach(function(handler) {
+                handler.enable();
+            });
+    }
+}
+
+map.on('layeradd', function(e) {
+
+    // BOYLE HEIGHTS HTML
+    document.getElementById('about-bh').innerHTML = 
+    `<div><button class="about-close-button" onclick="toggleAbout();"><b>✕</b></button></div>
+    Sample Boyle Heights Page`; 
+
+    // LONG BEACH HTML
+    document.getElementById('about-lb').innerHTML = 
+    `<div><button class="about-close-button" onclick="toggleAbout();"><b>✕</b></button></div>
+    Sample Long Beach Page`;
+
+    // SOUTH LA HTML
+    document.getElementById('about-sla').innerHTML = 
+    `<div><button class="about-close-button" onclick="toggleAbout();"><b>✕</b></button></div>
+    Sample South LA Page`;
+
+}); 
+
+
 // INTERACTION
 
+function toggleAbout(e) {
+
+    if(showAbout === true){
+       $('.about-page').hide(); 
+       showAbout = false;
+       toggleMapInteraction();
+    }
+
+    else {
+
+        var layer = e.target;
+
+        switch (layer.feature.properties.Name) {
+        case "Boyle Heights":
+            $('#about-bh').show();
+            break;
+        case "Central / West Long Beach":
+            $('#about-lb').show();
+            break;  
+        case "South Los Angeles":
+            $('#about-sla').show();
+            break;    
+        }
+
+        showAbout = true;
+        toggleMapInteraction();
+    }
+}
 
 function highlightFeature(e) {
 
@@ -70,16 +138,45 @@ function resetFromButton(area) {
 function onEachFeature(feature, layer) {
     layer.on({
         mouseover: highlightFeature,
-        mouseout: resetHighlight
+        mouseout: resetHighlight,
+        click: toggleAbout
     });
 } 
 
 
-// Link button hover events with map features
-$('#boyle_heights').hover(function(){highlightFromButton(boyle_heights);},function(){resetFromButton(boyle_heights);});
-$('#long_beach').hover(function(){highlightFromButton(long_beach);},function(){resetFromButton(long_beach);});
-$('#south_la').hover(function(){highlightFromButton(south_la);},function(){resetFromButton(south_la);});
+// Link button hover and click events with map features
+$('#boyle_heights').hover(function(){
+                            highlightFromButton(boyle_heights);
+                        },function(){
+                            resetFromButton(boyle_heights);
+                        })
+                    .click(function(){
+                        $('#about-bh').show();
+                        showAbout = true;
+                        toggleMapInteraction();
+                    });
 
+$('#long_beach').hover(function(){
+                            highlightFromButton(long_beach);
+                        },function(){
+                            resetFromButton(long_beach);
+                        })
+                    .click(function(){
+                        $('#about-lb').show();
+                        showAbout = true;
+                        toggleMapInteraction();
+                    });
+
+$('#south_la').hover(function(){
+                            highlightFromButton(south_la);
+                        },function(){
+                            resetFromButton(south_la);
+                        })
+                    .click(function(){
+                        $('#about-sla').show();
+                        showAbout = true;
+                        toggleMapInteraction();
+                    });
 
 // MAP DATA
 
@@ -107,7 +204,9 @@ var south_la = L.geoJson(southLA, {
     onEachFeature: onEachFeature
 }).addTo(map);
 
-// POP UPS 
+
+
+/* POP UPS 
 
 boyle_heights.bindPopup(function (layer) {
     return L.Util.template(
@@ -133,6 +232,12 @@ $('#boyle_heights').on("click",function() {boyle_heights.openPopup();});
 $('#long_beach').on("click",function() {long_beach.openPopup();});
 $('#south_la').on("click",function() {south_la.openPopup();});
 
+*/
+
+
+
+
+ 
 
 
  
