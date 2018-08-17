@@ -53,24 +53,50 @@ cartodb.createVis('map', 'viz.json', {
             map.addControl(L.control.zoom());
 
             // Set infowindow
-            var sublayer = layers[1].getSubLayer(1);
-            sublayer.setInteraction(true);
-            sublayer.setInteractivity('cartodb_id,name,textshort,textlong,lat,lng,photo1cap,photo1url,photo2cap,photo2url,photo3cap,photo3url,videocap,videourl,videoframe,audiocap,audiourl');
+            var gentrificationlayer = layers[1].getSubLayer(0);
+            var landuselayer = layers[1].getSubLayer(1);
+            var storieslayer = layers[1].getSubLayer(2);
+            storieslayer.setInteraction(true);
+            storieslayer.setInteractivity('cartodb_id,name,textshort,textlong,lat,lng,photo1cap,photo1url,photo2cap,photo2url,photo3cap,photo3url,videocap,videourl,videoframe,audiocap,audiourl');
 
-            sublayer.infowindow.set('sanitizeTemplate',false);
-            sublayer.infowindow.set('template', $('#infowindow_template').html());
+            storieslayer.infowindow.set('sanitizeTemplate',false);
+            storieslayer.infowindow.set('template', $('#infowindow_template').html());
+
+            layers[1].on("load", function() {
+                if (!gentrificationlayer.isVisible()) {
+                    $('#gentrification-legend').hide();
+                }
+                else {
+                    $('#gentrification-legend').show();
+                }
+
+                if (!landuselayer.isVisible()) {
+                    $('#landuse-legend').hide();
+                }
+                else {
+                    $('#landuse-legend').show();
+                }
+
+                if (!storieslayer.isVisible()) {
+                    $('#stories-legend').hide();
+                }
+                else {
+                    $('#stories-legend').show();
+                }
+            });
+
 
             // Set tooltip
             vis.addOverlay({
                   type: 'tooltip',
-                  layer: sublayer,
+                  layer: storieslayer,
                   template: $('#hover_template').html(),
                   position: 'top|right',
                   fields: [{name: 'name', textshort: 'textshort'}]
                 }); 
 
             // Set map pan on point click
-            sublayer.on('featureClick', function(e, latlng, pos, data, layerNumber) {
+            storieslayer.on('featureClick', function(e, latlng, pos, data, layerNumber) {
                 map.panTo(latlng);
                 $('.cartodb-legend').hide();
                 //console.log("hidden");

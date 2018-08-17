@@ -96,6 +96,35 @@ vizjson({
                      }
                   },
                   {  
+                     "id":"fff1a102-799c-4059-bb2d-08bdd6e5851d",
+                     "type":"CartoDB",
+                     "infowindow":{  
+                        "template_name":"none",
+                        "maxHeight":180,
+                        "template":"\u003cdiv class=\"cartodb-popup v2\"\u003e\n  \u003ca href=\"#close\" class=\"cartodb-popup-close-button close\"\u003ex\u003c/a\u003e\n  \u003cdiv class=\"cartodb-popup-content-wrapper\"\u003e\n    \u003cdiv class=\"cartodb-popup-content\"\u003e\n    \u003c/div\u003e\n  \u003c/div\u003e\n  \u003cdiv class=\"cartodb-popup-tip-container\"\u003e\u003c/div\u003e\n\u003c/div\u003e",
+                        "alternative_names":{  
+
+                        },
+                        "fields":null,
+                        "width":226
+                     },
+                     "tooltip":{  
+                        "template_name":"none",
+                        "template":"\u003cdiv class=\"cartodb-tooltip-content-wrapper\"\u003e\n  \u003cdiv class=\"cartodb-tooltip-content\"\u003e\n  \u003c/div\u003e\n\u003c/div\u003e"
+                     },
+                     "legend":null,
+                     "order":2,
+                     "visible":false,
+                     "options":{  
+                        "layer_name":"Land Use",
+                        "cartocss":"#layer {\n  polygon-fill: ramp([type], (#F2636D,\n    #fdffaa,\n    #A5D8A3,\n#f7be6d,\n#bf9b69,\n#acd0ef, #fff, #ddd), (\n    \"commercial_serv\",\n    \"res\",\n    \"open_rec\",\n    \"facilities\",\n    \"educat\",\n    \"indust\",\n    \"vacant\", \"mixed\"), \"=\");\n  opacity: 0.7;\n}\n#layer::outline {\n  line-width: 0;\n  line-color: #FFFFFF;\n  line-opacity: 0.9;\n}",
+                        "cartocss_version":"2.1.1",
+                        "interactivity":"",
+                        "sql":"SELECT * FROM lalanduse05merged",
+                        "table_name":"\"\"."
+                     }
+                  },
+                  {  
                      "id":"4746ce42-462a-4b77-a9bc-85385d2303d6",
                      "type":"CartoDB",
                      "infowindow":{  
@@ -237,11 +266,11 @@ vizjson({
                         "template":"<div class=\"cartodb-tooltip-content-wrapper\">\n  <div class=\"cartodb-tooltip-content\">\n  </div>\n</div>"
                      },
                      "legend":null,
-                     "order":2,
+                     "order":3,
                      "visible":true,
                      "options":{  
                         "layer_name":"Stories",
-                        "cartocss":"#layer {\n  marker-width: 40;\n  marker-fill: #9b40f4;\n  marker-fill-opacity: 0.9;\n  marker-file: url('https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/marker-18.svg');\n  marker-allow-overlap: true;\n  marker-line-width: 2;\n  marker-line-color: #FFFFFF;\n  marker-line-opacity: 1;\n}",
+                        "cartocss":"#layer {\n  marker-width: 40;\n  marker-fill: #8965B2;\n  marker-fill-opacity: 0.9;\n  marker-file: url('https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/marker-18.svg');\n  marker-allow-overlap: true;\n  marker-line-width: 2;\n  marker-line-color: #FFFFFF;\n  marker-line-opacity: 1;\n}",
                         "cartocss_version":"2.1.1",
                         "interactivity":"cartodb_id",
                         "sql":"SELECT * FROM prototype_data",

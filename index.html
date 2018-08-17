@@ -30,14 +30,27 @@
   
 <div id="map">
 	<div class="cartodb-legend color">
-	  <div class="legend-title">Gentrification in LA</div>
 	  <ul class="legend-list">
-	    <li><div class="bullet" style="background-color: #fcedb4;"></div> Vulnerable, did not gentrify</li>
-	    <li><div class="bullet" style="background-color: #3e7bb6;"></div> Gentrified 2000-2013 only</li>
-	    <li><div class="bullet" style="background-color: #229a00;"></div> Gentrified 1990-2000 only</li>
-	    <li><div class="bullet" style="background-color: #ff2900;"></div> Gentrified both decades</li>
-	    	<hr style="height:0px; visibility:hidden;" />
-	    <li><div class="bullet" style="background-color: #9b40f4;"></div><em style="font-weight:400;"> Personal Narratives</em></li>
+	  	<div id="gentrification-legend" class="legend-section">
+	  		<div class="legend-title">Gentrification</div>
+		    <li><div class="bullet" style="background-color: #fcedb4;"></div> Vulnerable, did not gentrify</li>
+		    <li><div class="bullet" style="background-color: #3e7bb6;"></div> Gentrified 2000-2013 only</li>
+		    <li><div class="bullet" style="background-color: #229a00;"></div> Gentrified 1990-2000 only</li>
+		    <li><div class="bullet" style="background-color: #ff2900;"></div> Gentrified both decades</li>
+	    </div>
+	    <div id="landuse-legend" class="legend-section">
+	  		<div class="legend-title">Land Use</div>
+		    <li><div class="bullet" style="background-color: #F2636D;"></div> Commercial</li>
+		    <li><div class="bullet" style="background-color: #fdffaa;"></div> Residential</li>
+		    <li><div class="bullet" style="background-color: #A5D8A3;"></div> Open/Recreational</li>
+		    <li><div class="bullet" style="background-color: #f7be6d;"></div> Facilities</li>
+		    <li><div class="bullet" style="background-color: #bf9b69;"></div> Educational</li>
+		    <li><div class="bullet" style="background-color: #acd0ef;"></div> Industrial</li>
+		    <li><div class="bullet" style="background-color: #fff;"></div> Vacant</li>
+	    </div>
+	    <div id="stories-legend" class="legend-section">
+	    	<li><div class="bullet" style="background-color: #9b40f4;"></div><em style="font-weight:400;"> Personal Narratives</em></li>
+
 	  </ul>
 	  <!-- 
 	  <div class="legend-title">Personal Narratives</div>
@@ -54,7 +67,7 @@
 	  <a href="#close" class="cartodb-popup-close-button close" onclick="popupclose();">x</a>
 		  <div class="cartodb-popup-content-wrapper">
 		    <div class="cartodb-popup-content">
-		    	<h2 style="color: #9b40f4; line-height:1.5;"> {{name}} </h2> 
+		    	<h2 style="color: #8965B2; line-height:1.5;"> {{name}} </h2> 
 		    	<h3><a href="http://maps.google.com/maps?q=&layer=c&cbll={{lat}},{{lng}}" target="_blank"> 
 		    		{{address}} </a>
 		    	</h3>
@@ -79,7 +92,7 @@
 <script type="infowindow/html" id="hover_template">
 	<div class="cartodb-tooltip-content-wrapper">
 		<div class="cartodb-tooltip-content">
-			<h3 style="color: #9b40f4;">{{name}}</h3>
+			<h3 style="color: #8965B2;">{{name}}</h3>
 			<p>{{textshort}}</p>
 		</div>
 	</div>

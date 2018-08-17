@@ -29,10 +29,16 @@ div.cartodb-legend .legend-title {
 	color: #444 !important;
 }
 
+div.cartodb-legend .legend-section {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
 div.cartodb-legend.category ul li, div.cartodb-legend.color ul li, div.cartodb-legend.custom ul li {
 	color: #444 !important;
 	font-weight: 100 !important;
 }
+
 
 #map .cartodb-tooltip-content {
 	padding: 6px;
@@ -52,7 +58,7 @@ div.cartodb-legend.category ul li, div.cartodb-legend.color ul li, div.cartodb-l
 }
 
 #map .cartodb-popup-content a {
-	color: #9b40f4;
+	color: #8965B2;
 	font-style: italic;
 }
 
@@ -129,6 +135,7 @@ div.cartodb-layer-selector-box a.layers .count {
 div.cartodb-legend {
 	border: none !important;
 	box-shadow: 0 1px 5px rgba(0,0,0,.65) !important;
+	padding: 0px 15px !important;
 }
 
 #map .leaflet-top {
