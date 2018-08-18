@@ -41,8 +41,11 @@ map.on('layeradd', function(e) {
 
     // LONG BEACH HTML
     document.getElementById('about-lb').innerHTML = 
-    `<div><button class="about-close-button" onclick="toggleAbout();"><b>✕</b></button></div>
-    Sample Long Beach Page`;
+    `<div>
+        <span class="title-text">LONG BEACH</span>
+        <button class="about-close-button" onclick="toggleAbout();"><b>✕</b></button>
+    </div>
+    <a href="longbeach/index.html"><button class="selector-button">View Stories...</button></a>`;
 
     // SOUTH LA HTML
     document.getElementById('about-sla').innerHTML = 

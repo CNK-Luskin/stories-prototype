@@ -187,9 +187,9 @@ b {
 .title-text {
     display: inline;
     font-size: 30px;
-    position: relative;
-    left: 9px;
-    top: 0px;
+    position: absolute;
+    left: 30px;
+    top: 10px;
     color: #47473e;
     letter-spacing: 0.6px;
     font-weight: 600;
