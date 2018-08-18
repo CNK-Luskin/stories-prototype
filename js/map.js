@@ -19,13 +19,13 @@ var showAbout = false;
 
 function toggleMapInteraction() {
     if (showAbout === true) {
-        $( "#button-panel" ).css( "pointer-events", "none");
+        $( "#button-panel" ).hide;
         map._handlers.forEach(function(handler) {
                 handler.disable();
             });
     }
     else {
-        $( "#button-panel" ).css( "pointer-events", "auto");
+        $( "#button-panel" ).show;
         map._handlers.forEach(function(handler) {
                 handler.enable();
             });
@@ -36,21 +36,33 @@ map.on('layeradd', function(e) {
 
     // BOYLE HEIGHTS HTML
     document.getElementById('about-bh').innerHTML = 
-    `<div><button class="about-close-button" onclick="toggleAbout();"><b>✕</b></button></div>
-    Sample Boyle Heights Page`; 
+    `<div class="about-banner">
+       <span class="title-text">BOYLE HEIGHTS (Coming Soon)</span>
+       <button class="about-close-button" onclick="toggleAbout();"><b>✕</b></button>
+    </div>`; 
 
     // LONG BEACH HTML
     document.getElementById('about-lb').innerHTML = 
-    `<div>
-        <span class="title-text">LONG BEACH</span>
-        <button class="about-close-button" onclick="toggleAbout();"><b>✕</b></button>
-    </div>
-    <a href="longbeach/index.html"><button class="selector-button">View Stories...</button></a>`;
+     `<div class="about-banner">
+       <span class="title-text">LONG BEACH</span>
+        <a href="longbeach/index.html"><button class="about-link-button">Explore Stories</button></a>
+       <button class="about-close-button" onclick="toggleAbout();"><b>✕</b></button>
+       </div>
+    <div style="font-size:18px;">
+        <p>Lorem ipsum dolor sit amet, ei est legere quaeque. Adhuc ipsum singulis at mei. Per brute ubique nonumes ut. 
+            Elit veri natum vix ex, quod rebum idque est ea. </p>
+       <p>Id equidem salutatus vis, probo iusto corrumpit est te. Fastidii referrentur cu nam. Qui porro mentitum ut, cu his sumo velit oporteat, unum apeirian pro ei. 
+            Platonem reformidans ne sed. Cum ut autem denique, ea nam quod adhuc nostrum.</p>
+       <p>Melius patrioque ea nec, cu vocibus mandamus petentium pri, sea no velit labores apeirian. Ut commodo nominavi sit, ei sit odio maiorum consectetuer. Ut amet ludus denique sit. Ad sale dissentiet cum, in facer semper urbanitas sed, in vix regione graecis commune. 
+            Per alii legimus platonem at, per adhuc omnes everti ne, an est probo ferri sadipscing. </p>
+    </div>`;
 
     // SOUTH LA HTML
     document.getElementById('about-sla').innerHTML = 
-    `<div><button class="about-close-button" onclick="toggleAbout();"><b>✕</b></button></div>
-    Sample South LA Page`;
+    `<div class="about-banner">
+       <span class="title-text">SOUTH LA (Coming Soon)</span>
+       <button class="about-close-button" onclick="toggleAbout();"><b>✕</b></button>
+    </div>`;
 
 }); 
 
