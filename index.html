@@ -30,6 +30,7 @@
   
 <div id="map">
 	<div class="cartodb-legend color">
+	 <div class="legend-name">Long Beach</div>
 	  <ul class="legend-list">
 	  	<div id="gentrification-legend" class="legend-section">
 	  		<div class="legend-title">Gentrification</div>
@@ -49,7 +50,7 @@
 		    <li><div class="bullet" style="background-color: #fff;"></div> Vacant</li>
 	    </div>
 	    <div id="stories-legend" class="legend-section">
-	    	<li><div class="bullet" style="background-color: #9b40f4;"></div><em style="font-weight:400;"> Personal Narratives</em></li>
+	    	<li><div class="bullet" style="background-color: #8965B2;"></div><em style="font-weight:400;"> Personal Narratives</em></li>
 
 	  </ul>
 	  <!-- 
@@ -64,7 +65,7 @@
 
 <script type="infowindow/html" id="infowindow_template">
 	<div class="cartodb-popup v2">
-	  <a href="#close" class="cartodb-popup-close-button close" onclick="popupclose();">x</a>
+	  <a href="#close" onclick="showLegend();" class="cartodb-popup-close-button close">x</a>
 		  <div class="cartodb-popup-content-wrapper">
 		    <div class="cartodb-popup-content">
 		    	<h2 style="color: #8965B2; line-height:1.5;"> {{name}} </h2> 
@@ -98,6 +99,7 @@
 	</div>
 </script>
 
+<script src="longbeach.js"></script>
 <script src="map.js"></script>
 
 </body>

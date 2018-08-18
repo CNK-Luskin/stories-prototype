@@ -25,6 +25,14 @@ html, body, #map {
 	position: relative;
 }
 
+div.cartodb-legend .legend-name {
+	font-size: 15px;
+    margin-top: 15px;
+    color: #444;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
 div.cartodb-legend .legend-title {
 	color: #444 !important;
 }
@@ -177,6 +185,10 @@ div.cartodb-legend {
 
 .base {
 	z-index: -1 !important;
+}
+
+.leaflet-control-layers-expanded {
+	color: #666;
 }
 
 

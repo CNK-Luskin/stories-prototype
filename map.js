@@ -7,9 +7,9 @@ cartodb.createVis('map', 'viz.json', {
             loaderControl: false,
             layer_selector: true,
             detectRetina: true,
-            center_lat: 33.936454,
-            center_lon: -118.232699,
-            zoom: 10
+            center_lat: 33.78,
+            center_lon: -118.19,
+            zoom: 13
         }).on('done', function(vis,layers) {
             // Get the "native" Leaflet map
             var map = vis.getNativeMap();
@@ -33,6 +33,17 @@ cartodb.createVis('map', 'viz.json', {
                      }).addTo(map);
             $(carto.getContainer()).addClass('base');
 
+            longbeach = L.geoJson(longBeach, {
+                style: function() {
+                    return {
+                        weight: 3,
+                    color: '#8965B2',
+                    opacity: 1,
+                    fillColor: 'rgb(137,101,178)',
+                    fillOpacity: 0
+                    }
+                }
+            }).addTo(map);
 
             var baselayers = {"Satellite": imagery,
                                 "Map": carto
@@ -99,12 +110,17 @@ cartodb.createVis('map', 'viz.json', {
             storieslayer.on('featureClick', function(e, latlng, pos, data, layerNumber) {
                 map.panTo(latlng);
                 $('.cartodb-legend').hide();
-                //console.log("hidden");
             });
 
         }).on('error', function() {
             console.log("some error occurred");
     });
+
+function showLegend() {
+    $('.cartodb-legend').show();
+}
+
+
 
 /* $(window).on( "load", function() {
         $(".leaflet-layer[style='opacity: 0.99;']").css("z-index","3");
@@ -116,13 +132,6 @@ $(document).on( "ready", function() {
         console.log( "window loaded" );
     });
 */
-
-function popupclose() {
-    $('.cartodb-legend').show();
-    $('iframe').attr('src', $('iframe').attr('src'));
-}
-
-
 
 
 

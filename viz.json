@@ -117,7 +117,7 @@ vizjson({
                      "visible":false,
                      "options":{  
                         "layer_name":"Land Use",
-                        "cartocss":"#layer {\n  polygon-fill: ramp([type], (#F2636D,\n    #fdffaa,\n    #A5D8A3,\n#f7be6d,\n#bf9b69,\n#acd0ef, #fff, #ddd), (\n    \"commercial_serv\",\n    \"res\",\n    \"open_rec\",\n    \"facilities\",\n    \"educat\",\n    \"indust\",\n    \"vacant\", \"mixed\"), \"=\");\n  opacity: 0.7;\n}\n#layer::outline {\n  line-width: 0;\n  line-color: #FFFFFF;\n  line-opacity: 0.9;\n}",
+                        "cartocss":"#layer {\n  polygon-fill: ramp([type], (#F2636D,\n    #fdffaa,\n    #A5D8A3,\n#f7be6d,\n#bf9b69,\n#acd0ef, #fff, #ddd), (\n    \"commercial_serv\",\n    \"res\",\n    \"open_rec\",\n    \"facilities\",\n    \"educat\",\n    \"indust\",\n    \"vacant\", \"mixed\"), \"=\");\n  opacity: 0.5;\n}\n#layer::outline {\n  line-width: 0;\n  line-color: #FFFFFF;\n  line-opacity: 0.9;\n}",
                         "cartocss_version":"2.1.1",
                         "interactivity":"",
                         "sql":"SELECT * FROM lalanduse05merged",
@@ -270,7 +270,7 @@ vizjson({
                      "visible":true,
                      "options":{  
                         "layer_name":"Stories",
-                        "cartocss":"#layer {\n  marker-width: 40;\n  marker-fill: #8965B2;\n  marker-fill-opacity: 0.9;\n  marker-file: url('https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/marker-18.svg');\n  marker-allow-overlap: true;\n  marker-line-width: 2;\n  marker-line-color: #FFFFFF;\n  marker-line-opacity: 1;\n}",
+                        "cartocss":"#layer {\n  marker-width: 40;\n  marker-fill: #8965B2;\n  marker-fill-opacity: 1;\n  marker-file: url('https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/marker-18.svg');\n  marker-allow-overlap: true;\n  marker-line-width: 2;\n  marker-line-color: #FFFFFF;\n  marker-line-opacity: 1;\n}",
                         "cartocss_version":"2.1.1",
                         "interactivity":"cartodb_id",
                         "sql":"SELECT * FROM prototype_data",
