@@ -96,7 +96,6 @@ cartodb.createVis('map', 'js/viz.json', {
                 }
             });
 
-
             // Set tooltip
             vis.addOverlay({
                   type: 'tooltip',
@@ -112,6 +111,22 @@ cartodb.createVis('map', 'js/viz.json', {
                 $('.cartodb-legend').hide();
             });
 
+            $("li:contains('Gentrified Areas')").on("click", function() {
+                // after click...
+                if (gentrificationlayer.isVisible() && landuselayer.isVisible()) {
+                     $("a.layer:contains('Land Use')")[0].click();
+                     console.log("hello!");
+                 }
+             });
+
+            $("li:contains('Land Use')").on("click", function() {
+                // after click...
+                if (gentrificationlayer.isVisible() && landuselayer.isVisible()) {
+                     $("a.layer:contains('Gentrified Areas')")[0].click();
+                     console.log("hello2!");
+                 }
+             });
+
         }).on('error', function() {
             console.log("some error occurred");
     });
@@ -119,6 +134,8 @@ cartodb.createVis('map', 'js/viz.json', {
 function showLegend() {
     $('.cartodb-legend').show();
 }
+
+
 
 
 
