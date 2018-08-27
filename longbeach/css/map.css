@@ -28,6 +28,7 @@ html, body, #map {
 div.cartodb-legend .legend-name {
 	font-size: 15px;
     margin-top: 15px;
+    margin-bottom: 15px;
     color: #444;
     font-weight: 600;
     text-transform: uppercase;
