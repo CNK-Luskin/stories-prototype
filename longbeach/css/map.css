@@ -48,7 +48,6 @@ div.cartodb-legend.category ul li, div.cartodb-legend.color ul li, div.cartodb-l
 	font-weight: 100 !important;
 }
 
-
 #map .cartodb-tooltip-content {
 	padding: 6px;
 }
@@ -139,6 +138,14 @@ div.cartodb-layer-selector-box a.layers:hover {
 
 div.cartodb-layer-selector-box a.layers .count {
 	background-color: #999 !important;
+}
+
+div.cartodb-layer-selector-box div.cartodb-dropdown ul li {
+	border-bottom: none;
+}
+
+div.cartodb-layer-selector-box div.cartodb-dropdown ul li:last-child {
+    border-top: 1px solid #ccc
 }
 
 div.cartodb-legend {
