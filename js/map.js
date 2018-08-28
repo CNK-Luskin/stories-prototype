@@ -48,6 +48,15 @@ map.on('layeradd', function(e) {
         <a href="longbeach/index.html"><button class="about-link-button">Explore Stories</button></a>
        <button class="about-close-button" onclick="toggleAbout();"><b>✕</b></button>
        </div>
+    <div class="resp-container"> 
+        <iframe class="resp-iframe header-remove" 
+            src="https://www.youtube.com/embed/tJvE-BuYCDo?rel=0&amp;showinfo=0" 
+            frameborder="0" 
+            allow="autoplay; encrypted-media" 
+            allowfullscreen>
+        </iframe>
+    </div>
+    <hr style="height:0px; visibility:hidden;" />
     <div style="font-size:18px;">
         <p>Lorem ipsum dolor sit amet, ei est legere quaeque. Adhuc ipsum singulis at mei. Per brute ubique nonumes ut. 
             Elit veri natum vix ex, quod rebum idque est ea. </p>
