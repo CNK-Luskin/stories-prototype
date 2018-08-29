@@ -109,13 +109,13 @@ cartodb.createVis('map', 'js/viz.json', {
             storieslayer.on('featureClick', function(e, latlng, pos, data, layerNumber) {
                 map.panTo(latlng);
                 $('.cartodb-legend').hide();
+                $('.leaflet-control-layers').hide();
             });
 
             $("li:contains('Gentrified Areas')").on("click", function() {
                 // after click...
                 if (gentrificationlayer.isVisible() && landuselayer.isVisible()) {
                      $("a.layer:contains('Land Use')")[0].click();
-                     console.log("hello!");
                  }
              });
 
@@ -123,7 +123,6 @@ cartodb.createVis('map', 'js/viz.json', {
                 // after click...
                 if (gentrificationlayer.isVisible() && landuselayer.isVisible()) {
                      $("a.layer:contains('Gentrified Areas')")[0].click();
-                     console.log("hello2!");
                  }
              });
 
@@ -133,6 +132,7 @@ cartodb.createVis('map', 'js/viz.json', {
 
 function showLegend() {
     $('.cartodb-legend').show();
+    $('.leaflet-control-layers').show();
 }
 
 
