@@ -112,14 +112,14 @@ cartodb.createVis('map', 'js/viz.json', {
                 $('.leaflet-control-layers').hide();
             });
 
-            $("li:contains('Gentrified Areas')").on("click", function() {
+            $("div.cartodb-layer-selector-box li:contains('Gentrified Areas')").on("click", function() {
                 // after click...
                 if (gentrificationlayer.isVisible() && landuselayer.isVisible()) {
                      $("a.layer:contains('Land Use')")[0].click();
                  }
              });
 
-            $("li:contains('Land Use')").on("click", function() {
+            $("div.cartodb-layer-selector-box li:contains('Land Use')").on("click", function() {
                 // after click...
                 if (gentrificationlayer.isVisible() && landuselayer.isVisible()) {
                      $("a.layer:contains('Gentrified Areas')")[0].click();
@@ -134,27 +134,4 @@ function showLegend() {
     $('.cartodb-legend').show();
     $('.leaflet-control-layers').show();
 }
-
-
-
-
-
-/* $(window).on( "load", function() {
-        $(".leaflet-layer[style='opacity: 0.99;']").css("z-index","3");
-        console.log( "window loaded" );
-    });
-
-$(document).on( "ready", function() {
-        $(".leaflet-layer[style='opacity: 0.99;']").css("z-index","3");
-        console.log( "window loaded" );
-    });
-*/
-
-
-
-
-
-
-
-
 
