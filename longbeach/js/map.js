@@ -112,6 +112,8 @@ cartodb.createVis('map', 'js/viz.json', {
                 $('.leaflet-control-layers').hide();
             });
 
+
+            // Allow maximum of one contextual layer at once:
             $("div.cartodb-layer-selector-box li:contains('Gentrified Areas')").on("click", function() {
                 // after click...
                 if (gentrificationlayer.isVisible() && landuselayer.isVisible()) {

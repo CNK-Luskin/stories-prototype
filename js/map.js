@@ -32,55 +32,12 @@ function toggleMapInteraction() {
     }
 }
 
-map.on('layeradd', function(e) {
-
-    // BOYLE HEIGHTS HTML
-    document.getElementById('about-bh').innerHTML = 
-    `<div class="about-banner">
-       <span class="title-text">BOYLE HEIGHTS (Coming Soon)</span>
-       <button class="about-close-button" onclick="toggleAbout();"><b>✕</b></button>
-    </div>`; 
-
-    // LONG BEACH HTML
-    document.getElementById('about-lb').innerHTML = 
-     `<div class="about-banner">
-       <span class="title-text">LONG BEACH</span>
-        <a href="longbeach/index.html"><button class="about-link-button">Explore Stories</button></a>
-       <button class="about-close-button" onclick="toggleAbout();"><b>✕</b></button>
-       </div>
-    <div class="resp-container"> 
-        <iframe class="resp-iframe header-remove" 
-            src="https://www.youtube.com/embed/tJvE-BuYCDo?rel=0&amp;showinfo=0" 
-            frameborder="0" 
-            allow="autoplay; encrypted-media" 
-            allowfullscreen>
-        </iframe>
-    </div>
-    <hr style="height:0px; visibility:hidden;" />
-    <div style="font-size:18px;">
-        <p>Lorem ipsum dolor sit amet, ei est legere quaeque. Adhuc ipsum singulis at mei. Per brute ubique nonumes ut. 
-            Elit veri natum vix ex, quod rebum idque est ea. </p>
-       <p>Id equidem salutatus vis, probo iusto corrumpit est te. Fastidii referrentur cu nam. Qui porro mentitum ut, cu his sumo velit oporteat, unum apeirian pro ei. 
-            Platonem reformidans ne sed. Cum ut autem denique, ea nam quod adhuc nostrum.</p>
-       <p>Melius patrioque ea nec, cu vocibus mandamus petentium pri, sea no velit labores apeirian. Ut commodo nominavi sit, ei sit odio maiorum consectetuer. Ut amet ludus denique sit. Ad sale dissentiet cum, in facer semper urbanitas sed, in vix regione graecis commune. 
-            Per alii legimus platonem at, per adhuc omnes everti ne, an est probo ferri sadipscing. </p>
-    </div>`;
-
-    // SOUTH LA HTML
-    document.getElementById('about-sla').innerHTML = 
-    `<div class="about-banner">
-       <span class="title-text">SOUTH LA (Coming Soon)</span>
-       <button class="about-close-button" onclick="toggleAbout();"><b>✕</b></button>
-    </div>`;
-
-}); 
-
-
 // INTERACTION
 
 function toggleAbout(e) {
 
     if(showAbout === true){
+       $('.about-page').html('');
        $('.about-page').hide(); 
        showAbout = false;
        toggleMapInteraction();
@@ -92,12 +49,15 @@ function toggleAbout(e) {
 
         switch (layer.feature.properties.Name) {
         case "Boyle Heights":
+            $('#about-bh').html($('#about-bh-content').html());
             $('#about-bh').show();
             break;
         case "Central / West Long Beach":
+            $('#about-lb').html($('#about-lb-content').html());
             $('#about-lb').show();
             break;  
         case "South Los Angeles":
+            $('#about-sla').html($('#about-sla-content').html());
             $('#about-sla').show();
             break;    
         }
@@ -175,6 +135,7 @@ $('#boyle_heights').hover(function(){
                             resetFromButton(boyle_heights);
                         })
                     .click(function(){
+                        $('#about-bh').html($('#about-bh-content').html());
                         $('#about-bh').show();
                         showAbout = true;
                         toggleMapInteraction();
@@ -186,6 +147,7 @@ $('#long_beach').hover(function(){
                             resetFromButton(long_beach);
                         })
                     .click(function(){
+                        $('#about-lb').html($('#about-lb-content').html());
                         $('#about-lb').show();
                         showAbout = true;
                         toggleMapInteraction();
@@ -197,6 +159,7 @@ $('#south_la').hover(function(){
                             resetFromButton(south_la);
                         })
                     .click(function(){
+                        $('#about-sla').html($('#about-sla-content').html());
                         $('#about-sla').show();
                         showAbout = true;
                         toggleMapInteraction();

@@ -13,6 +13,7 @@
 	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.js"></script>
 
 	</head>
+
 	<body>
 		<div id="topBanner">
   			<img src='displacement-logo.png' height='65' width='100%'>
@@ -27,6 +28,58 @@
 	    	<div id="about-lb" class="about-page"></div>
 	    	<div id="about-sla" class="about-page"></div>
 		</div>
+
+		<script type="about/html" id="about-bh-content">
+			
+			<div class="about-banner">
+	       	   <span class="title-text">BOYLE HEIGHTS (Coming Soon)</span>
+	       	   <button class="about-close-button" onclick="toggleAbout();"><b>✕</b></button>
+	    	</div>
+	    
+    	</script>
+
+    	<script type="about/html" id="about-lb-content">
+
+			<div class="about-banner">
+			   <span class="title-text">LONG BEACH</span>
+			   <a href="longbeach/index.html">
+			   <button class="about-link-button">Explore Stories</button>
+			   </a>
+			   <button class="about-close-button" onclick="toggleAbout();"><b>✕</b>
+			   </button>
+			</div>
+			<div class="resp-container"> 
+			   <iframe class="resp-iframe header-remove" 
+			      src="https://www.youtube.com/embed/tJvE-BuYCDo?rel=0&amp;showinfo=0" 
+			      frameborder="0" 
+			      allow="autoplay; encrypted-media" 
+			      allowfullscreen>
+			   </iframe>
+			</div>
+			<hr style="height:0px; visibility:hidden;" />
+			<div style="font-size:18px;">
+			   <p>Lorem ipsum dolor sit amet, ei est legere quaeque. Adhuc ipsum singulis at mei. Per brute ubique nonumes ut. 
+			      Elit veri natum vix ex, quod rebum idque est ea. 
+			   </p>
+			   <p>Id equidem salutatus vis, probo iusto corrumpit est te. Fastidii referrentur cu nam. Qui porro mentitum ut, cu his sumo velit oporteat, unum apeirian pro ei. 
+			      Platonem reformidans ne sed. Cum ut autem denique, ea nam quod adhuc nostrum.
+			   </p>
+			   <p>Melius patrioque ea nec, cu vocibus mandamus petentium pri, sea no velit labores apeirian. Ut commodo nominavi sit, ei sit odio maiorum consectetuer. Ut amet ludus denique sit. Ad sale dissentiet cum, in facer semper urbanitas sed, in vix regione graecis commune. 
+			      Per alii legimus platonem at, per adhuc omnes everti ne, an est probo ferri sadipscing. 
+			   </p>
+			</div>
+
+		</script>
+
+		<script type="about/html" id="about-sla-content">
+
+		    <div class="about-banner">
+		       <span class="title-text">SOUTH LA (Coming Soon)</span>
+		       <button class="about-close-button" onclick="toggleAbout();"><b>✕</b></button>
+		    </div>
+
+		</script>
+
 			<!-- SCRIPT --> 
 			<script type="text/javascript" src="js/boyleHeights.js"></script>	
 			<script type="text/javascript" src="js/longBeach.js"></script>
