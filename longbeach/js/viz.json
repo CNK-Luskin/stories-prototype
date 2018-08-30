@@ -136,9 +136,14 @@ vizjson({
                               "position":0
                            },
                            {  
-                              "name":"photo2url",
+                              "name":"address",
                               "title":true,
-                              "position":1
+                              "position":23
+                           },
+                           {  
+                              "name":"textshort",
+                              "title":true,
+                              "position":8
                            },
                            {  
                               "name":"textlong",
@@ -154,36 +159,6 @@ vizjson({
                               "name":"lng",
                               "title":true,
                               "position":4
-                           },
-                           {  
-                              "name":"photo1cap",
-                              "title":true,
-                              "position":5
-                           },
-                           {  
-                              "name":"photo1url",
-                              "title":true,
-                              "position":6
-                           },
-                           {  
-                              "name":"photo2cap",
-                              "title":true,
-                              "position":7
-                           },
-                           {  
-                              "name":"textshort",
-                              "title":true,
-                              "position":8
-                           },
-                           {  
-                              "name":"photo3cap",
-                              "title":true,
-                              "position":9
-                           },
-                           {  
-                              "name":"photo3url",
-                              "title":true,
-                              "position":10
                            },
                            {  
                               "name":"videocap",
@@ -244,11 +219,6 @@ vizjson({
                               "name":"photoreelcap",
                               "title":true,
                               "position":22
-                           },
-                           {  
-                              "name":"address",
-                              "title":true,
-                              "position":23
                            }
                         ],
                         "maxHeight":180,

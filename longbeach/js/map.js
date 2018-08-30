@@ -68,7 +68,10 @@ cartodb.createVis('map', 'js/viz.json', {
             var landuselayer = layers[1].getSubLayer(1);
             var storieslayer = layers[1].getSubLayer(2);
             storieslayer.setInteraction(true);
-            storieslayer.setInteractivity('cartodb_id,name,textshort,textlong,lat,lng,photo1cap,photo1url,photo2cap,photo2url,photo3cap,photo3url,videocap,videourl,videoframe,audiocap,audiourl');
+            storieslayer.setInteractivity('cartodb_id,name,textshort,textlong,lat,lng,'+
+                                            'videocap,videourl,videoframe,audiocap,audiourl,audioframe,'+
+                                            'singlephotocap,singlephotourl,singlephotoframe,'+
+                                            'photoreelcap,photoreelurl,photoreelframe');
 
             storieslayer.infowindow.set('sanitizeTemplate',false);
             storieslayer.infowindow.set('template', $('#infowindow_template').html());
