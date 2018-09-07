@@ -103,7 +103,7 @@ function resetHighlight(e) {
 
     layer.setStyle({
         fillOpacity: 0.8,
-        color: "#8965B2"
+        color: "#eeab17"
     });
 
     $('#boyle_heights').removeClass('hover');
@@ -115,7 +115,7 @@ function resetHighlight(e) {
 function resetFromButton(area) {
     area.setStyle({
         fillOpacity: 0.8,
-        color: "#8965B2"
+        color: "#eeab17"
     });
 }
 
@@ -170,8 +170,8 @@ $('#south_la').hover(function(){
 function style(feature) {
     return {
         weight: 1.5,
-        color: '#8965B2',
-        fillColor: 'rgb(137,101,178)',
+        color: '#eeab17',
+        fillColor: '#eeab17',
         fillOpacity: 0.8
     };
 }
@@ -190,7 +190,6 @@ var south_la = L.geoJson(southLA, {
     style: style,
     onEachFeature: onEachFeature
 }).addTo(map);
-
 
 
 /* POP UPS 

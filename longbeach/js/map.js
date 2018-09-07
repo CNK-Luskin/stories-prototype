@@ -37,7 +37,7 @@ cartodb.createVis('map', 'js/viz.json', {
                 style: function() {
                     return {
                         weight: 3,
-                    color: '#8965B2',
+                    color: '#eeab17',
                     opacity: 1,
                     fillColor: 'rgb(137,101,178)',
                     fillOpacity: 0
@@ -130,6 +130,9 @@ cartodb.createVis('map', 'js/viz.json', {
                      $("a.layer:contains('Gentrified Areas')")[0].click();
                  }
              });
+
+            // Change layer control text:
+            $('a.layers').html($('a.layers').html().replace('Visible layers','Toggle Layers'));
 
         }).on('error', function() {
             console.log("some error occurred");
