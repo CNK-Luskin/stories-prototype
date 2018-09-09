@@ -100,9 +100,9 @@ b {
 
 .selector-button:hover, .selector-button.hover {
     opacity: 1;
-    color: #B9F0FD;
+    color: #7B4F00;
     box-shadow: none;
-    /*font-weight: 500;*/
+    font-weight: 800;
 }
 
 .about-page {
@@ -112,7 +112,7 @@ b {
     letter-spacing: 0.2px;
     position: relative;
     overflow: scroll;
-    background-color: #eee;
+    background-color: white;
     z-index: 9000;
     padding: 90px 30px 30px 30px;
     color: #47473e;
@@ -151,7 +151,7 @@ b {
     z-index: 10000;
     background-color: rgba(0,0,0,0);
     border: none;
-    color: #47473e;
+    color: white;
     outline: none;
 }
 
@@ -165,15 +165,15 @@ b {
     height: 40px;
     border: none;
     border-radius: 30px;
-    background-color: #eee;
-    color: #47473e;
-    font-size: 24px;
-    font-weight: 600;
+    background-color: #eeab17;
+    color: white;
+    font-size: 21px;
+    font-weight: 200;
     letter-spacing: 0.7;
 }
 
 .about-link-button:hover, .about-close-button:hover {
-    color: #000;
+    color: #7B4F00;
 }
 
 .about-banner {
@@ -183,7 +183,7 @@ b {
     top: 65px;
     left: 0px;
     z-index: 9500;
-    background-color: #eee;
+    background-color: #ecaa30;
 }
 
 #title {
@@ -237,9 +237,9 @@ b {
     position: absolute;
     left: 30px;
     top: 10px;
-    color: #47473e;
-    letter-spacing: 0.6px;
-    font-weight: 600;
+    color: white;
+    letter-spacing: 1px;
+    font-weight: 200;
 }
 
 .subtitle {

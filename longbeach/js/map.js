@@ -132,7 +132,7 @@ cartodb.createVis('map', 'js/viz.json', {
              });
 
             // Change layer control text:
-            $('a.layers').html($('a.layers').html().replace('Visible layers','Toggle Layers'));
+            // $('a.layers').html($('a.layers').html().replace('Visible layers','Toggle Layers'));
 
         }).on('error', function() {
             console.log("some error occurred");

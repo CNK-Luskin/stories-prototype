@@ -73,7 +73,8 @@ function highlightFeature(e) {
 
     layer.setStyle({
         fillOpacity: 1,
-        color: "#B9F0FD"
+        color: "#9F6701",
+        weight: 3
     });
 
     // Link map feature hover events with buttons
@@ -93,7 +94,8 @@ function highlightFeature(e) {
 function highlightFromButton(area) {
     area.setStyle({
         fillOpacity: 1,
-        color: "#B9F0FD"
+        color: "#9F6701",
+        weight: 3
     });
 }
 

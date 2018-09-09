@@ -54,10 +54,19 @@ div.cartodb-legend.category ul li, div.cartodb-legend.color ul li, div.cartodb-l
 #map .cartodb-tooltip-content {
 	padding: 6px;
 }
+
+#map .cartodb-tooltip-content h3 {
+	/* font-family: 'Open Sans', sans-serif; */
+	font-size: 15px;
+	font-weight: 600;
+	color: #eeab17;
+}
+
 #map .cartodb-tooltip-content p {
 	/* font-family: 'Open Sans', sans-serif; */
-	font-size: 11px;
+	font-size: 12px;
 }
+
 #map .cartodb-searchbox .text {
 	/* font-family: 'Open Sans', sans-serif; */ 
 	font-size: 12px;
@@ -231,6 +240,7 @@ div.cartodb-legend {
 
 .leaflet-control-layers-expanded {
 	color: #666;
+	font-size: 13px;
 }
 
 
