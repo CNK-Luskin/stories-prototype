@@ -73,7 +73,7 @@ function highlightFeature(e) {
 
     layer.setStyle({
         fillOpacity: 1,
-        color: "#9F6701",
+        color: "#7B4F00",
         weight: 3
     });
 
@@ -94,7 +94,7 @@ function highlightFeature(e) {
 function highlightFromButton(area) {
     area.setStyle({
         fillOpacity: 1,
-        color: "#9F6701",
+        color: "#7B4F00",
         weight: 3
     });
 }
@@ -105,7 +105,7 @@ function resetHighlight(e) {
 
     layer.setStyle({
         fillOpacity: 0.8,
-        color: "#eeab17"
+        color: "#DDA221"
     });
 
     $('#boyle_heights').removeClass('hover');
@@ -117,7 +117,7 @@ function resetHighlight(e) {
 function resetFromButton(area) {
     area.setStyle({
         fillOpacity: 0.8,
-        color: "#eeab17"
+        color: "#DDA221"
     });
 }
 
@@ -172,8 +172,8 @@ $('#south_la').hover(function(){
 function style(feature) {
     return {
         weight: 1.5,
-        color: '#eeab17',
-        fillColor: '#eeab17',
+        color: '#DDA221',
+        fillColor: '#DDA221',
         fillOpacity: 0.8
     };
 }

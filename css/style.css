@@ -1,3 +1,9 @@
+/* Alternate base colors: 
+138B99 (aqua), 0A5159 (darker aqua)
+7A69B5 (purple)
+
+*/
+
 html {
     height: 100%;
 }
@@ -85,8 +91,8 @@ b {
     height: 48px;
     border: none;
     border-radius: 30px;
-    background-color: #eeab17;
-    box-shadow: #eeab17 0px 0px 1px 1px;
+    background-color: #DDA221;
+    box-shadow: #DDA221 0px 0px 1px 1px;
     opacity: 0.9;
     color: white;
     font-size: 18px;
@@ -151,28 +157,32 @@ b {
     z-index: 10000;
     background-color: rgba(0,0,0,0);
     border: none;
-    color: white;
+    color: #47473e;
     outline: none;
+}
+
+.about-close-button:hover {
+    color: #999;
 }
 
 .about-link-button {
     right: 80px;
-    top: 10px;
+    top: 7px;
     position: absolute;
-    padding: 0px;
+    padding: 0px 25px 0px 25px;
     display: block;
     z-index: 10000;
-    height: 40px;
+    height: 48px;
     border: none;
     border-radius: 30px;
-    background-color: #eeab17;
+    background-color: #DDA221;
     color: white;
-    font-size: 21px;
+    font-size: 22px;
     font-weight: 200;
     letter-spacing: 0.7;
 }
 
-.about-link-button:hover, .about-close-button:hover {
+.about-link-button:hover {
     color: #7B4F00;
 }
 
@@ -183,7 +193,8 @@ b {
     top: 65px;
     left: 0px;
     z-index: 9500;
-    background-color: #ecaa30;
+    background-color: white;
+    border-bottom: #47473e 2px; 
 }
 
 #title {
@@ -233,11 +244,11 @@ b {
 
 .title-text {
     display: inline;
-    font-size: 30px;
+    font-size: 34px;
     position: absolute;
     left: 30px;
     top: 10px;
-    color: white;
+    color: #47473e;
     letter-spacing: 1px;
     font-weight: 200;
 }

@@ -240,7 +240,7 @@ vizjson({
                      "visible":true,
                      "options":{  
                         "layer_name":"Stories",
-                        "cartocss":"#layer {\n  marker-width: 40;\n  marker-fill: #eeab17;\n  marker-fill-opacity: 1;\n  marker-file: url('https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/marker-18.svg');\n  marker-allow-overlap: true;\n  marker-line-width: 2;\n  marker-line-color: #FFFFFF;\n  marker-line-opacity: 1;\n}",
+                        "cartocss":"#layer {\n  marker-width: 40;\n  marker-fill: #E8A310;\n  marker-fill-opacity: 1;\n  marker-file: url('https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/marker-18.svg');\n  marker-allow-overlap: true;\n  marker-line-width: 2;\n  marker-line-color: #FFFFFF;\n  marker-line-opacity: 1;\n}",
                         "cartocss_version":"2.1.1",
                         "interactivity":"cartodb_id",
                         "sql":"SELECT * FROM prototype_data",

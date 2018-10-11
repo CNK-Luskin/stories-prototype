@@ -37,7 +37,7 @@ cartodb.createVis('map', 'js/viz.json', {
                 style: function() {
                     return {
                         weight: 3,
-                    color: '#eeab17',
+                    color: '#E8A310',
                     opacity: 1,
                     fillColor: 'rgb(137,101,178)',
                     fillOpacity: 0
