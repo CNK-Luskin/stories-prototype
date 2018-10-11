@@ -40,9 +40,9 @@ b {
 .resp-container {
     position: relative;
     overflow: hidden; 
-    width: 50%;
+    width: 70%;
     height: 0px;
-    padding-bottom: 24%;
+    padding-bottom: 34%;
 }
 
 .audio-container {
