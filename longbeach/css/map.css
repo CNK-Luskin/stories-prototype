@@ -59,7 +59,7 @@ div.cartodb-legend.category ul li, div.cartodb-legend.color ul li, div.cartodb-l
 	/* font-family: 'Open Sans', sans-serif; */
 	font-size: 15px;
 	font-weight: 600;
-	color: #E8A310;
+	color: #DDA221;
 }
 
 #map .cartodb-tooltip-content p {
@@ -83,7 +83,7 @@ div.cartodb-legend.category ul li, div.cartodb-legend.color ul li, div.cartodb-l
 */ 
 
 #map .cartodb-popup-content a {
-	color: #E8A310;
+	color: #DDA221;
 	font-style: italic;
 }
 
