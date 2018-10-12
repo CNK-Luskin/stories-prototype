@@ -120,7 +120,7 @@ b {
     overflow: scroll;
     background-color: white;
     z-index: 9000;
-    padding: 90px 30px 30px 30px;
+    padding: 90px 90px 30px 90px;
     color: #47473e;
     font-size: 18px;
     font-weight: 200;
@@ -247,7 +247,7 @@ b {
     display: inline;
     font-size: 34px;
     position: absolute;
-    left: 30px;
+    left: 90px;
     top: 10px;
     color: #47473e;
     letter-spacing: 1px;
