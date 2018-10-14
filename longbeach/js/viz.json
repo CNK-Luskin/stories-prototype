@@ -1,4 +1,4 @@
-// https://uducla.carto.com/u/uducla/api/v2/viz/664b2ba5-b804-4fd8-b734-c813d78242de/
+// https://uducla.cartodb.com/u/uducla/api/v2/viz/664b2ba5-b804-4fd8-b734-c813d78242de/viz.json
 
 vizjson({  
    "id":"664b2ba5-b804-4fd8-b734-c813d78242de",
@@ -57,7 +57,7 @@ vizjson({
             "tiler_protocol":"https",
             "tiler_domain":"carto.com",
             "tiler_port":"80",
-            "sql_api_protocol":"http",
+            "sql_api_protocol":"https",
             "sql_api_domain":"carto.com",
             "sql_api_endpoint":"/api/v2/sql",
             "sql_api_port":80,
