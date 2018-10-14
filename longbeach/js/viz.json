@@ -35,7 +35,7 @@ vizjson({
             "maxZoom":"18",
             "name":"Positron",
             "className":"positron_rainbow_labels",
-            "attribution":"&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+            "attribution":"",
             "selected":true,
             "val":"positron_rainbow_labels",
             "label":"Positron",
@@ -260,7 +260,7 @@ vizjson({
             "maxZoom":"18",
             "name":"Positron Labels",
             "className":"positron_rainbow_labels",
-            "attribution":"&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> contributors",
+            "attribution":"",
             "category":"CARTO",
             "urlTemplate":"https://{s}.basemaps.cartocdn.com/rastertiles/light_only_labels/{z}/{x}/{y}.png",
             "urlTemplate2x":"https://{s}.basemaps.cartocdn.com/rastertiles/light_only_labels/{z}/{x}/{y}@2x.png"
