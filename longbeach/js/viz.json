@@ -52,8 +52,8 @@ vizjson({
          "type":"layergroup",
          "options":{  
             "user_name":"uducla",
-            "maps_api_template":"https://{user}.carto.com:80",
-            "sql_api_template":"https://{user}.carto.com:80",
+            "maps_api_template":"http://{user}.carto.com:80",
+            "sql_api_template":"http://{user}.carto.com:80",
             "tiler_protocol":"https",
             "tiler_domain":"carto.com",
             "tiler_port":"80",
