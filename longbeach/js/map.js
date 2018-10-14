@@ -9,6 +9,7 @@ cartodb.createVis('map', 'js/viz.json', {
             detectRetina: true,
             center_lat: 33.78,
             center_lon: -118.19,
+            https: true,
             zoom: 13
         }).on('done', function(vis,layers) {
             // Get the "native" Leaflet map
@@ -18,14 +19,14 @@ cartodb.createVis('map', 'js/viz.json', {
                 wholink = 'i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
             
             imagery = L.tileLayer(
-                    'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+                    'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
                     attribution: '&copy; '+mapLink+', '+wholink,
                     maxZoom: 18,
                     zIndex: -1
                 });
             $(imagery.getContainer()).addClass('base');
 
-            carto = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+            carto = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
                     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>',
                     maxZoom: 18,
                     opacity: 1,
