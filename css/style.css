@@ -143,8 +143,18 @@ b {
     height: auto;
 }
 
-.about-page a{
-  color: #47473e;  
+.about-page a {
+  color: #47473e !important;  
+  font-style: italic;
+}
+
+.about-page a:hover {
+  color: #DDA221 !important;  
+  text-decoration: none !important;
+}
+
+.about-page li {
+    line-height: 2;
 }
 
 .about-button {
@@ -166,7 +176,7 @@ b {
 }
 
 .about-close-button {
-    right: 20px;
+    right: 30px;
     top: 10px;
     position: absolute;
     padding: 0px;
@@ -180,7 +190,7 @@ b {
 }
 
 .about-close-button:hover {
-    color: #999;
+    color: #DDA221;
 }
 
 .about-link-button {
@@ -232,13 +242,12 @@ b {
 
 .section-text {
     font-size: 22px;
-    text-decoration: underline;
-
+    font-weight: 400;
 }
 
 /* Mobile */ 
 
-@media (max-width: 560px) {
+@media (max-width: 660px) {
 
     .title-text {
         top: 14px;
