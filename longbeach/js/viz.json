@@ -117,7 +117,9 @@ vizjson({
                      "visible":false,
                      "options":{  
                         "layer_name":"Land Use",
-                        "cartocss":"#layer {\n  polygon-fill: ramp([type], (#F2636D,\n    #fdffaa,\n    #A5D8A3,\n#f7be6d,\n#bf9b69,\n#acd0ef, #fff, #ddd), (\n    \"commercial_serv\",\n    \"res\",\n    \"open_rec\",\n    \"facilities\",\n    \"educat\",\n    \"indust\",\n    \"vacant\", \"mixed\"), \"=\");\n  opacity: 0.5;\n}\n#layer::outline {\n  line-width: 0;\n  line-color: #FFFFFF;\n  line-opacity: 0.9;\n}",
+                        "cartocss":"#layer {\n  polygon-fill: ramp([type]," + 
+                                    "(#E83333,\n             #FFFEB3,\n    #73B272,           \n#2E6DFF,           \n#A87000,        \n#AB59C9,        #2E2E2E,   #FF9966)," + 
+                           "(\n    \"commercial_serv\",\n    \"res\",\n    \"open_rec\",\n    \"facilities\",\n    \"educat\",\n    \"indust\",\n    \"vacant\", \"mixed\"), \"=\");\n  opacity: 0.5;\n}\n#layer::outline {\n  line-width: 0;\n  line-color: #FFFFFF;\n  line-opacity: 0.9;\n}",
                         "cartocss_version":"2.1.1",
                         "interactivity":"",
                         "sql":"SELECT * FROM lalanduse05merged",
