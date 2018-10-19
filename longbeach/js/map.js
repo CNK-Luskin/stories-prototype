@@ -34,6 +34,18 @@ cartodb.createVis('map', 'js/viz.json', {
                      }).addTo(map);
             $(carto.getContainer()).addClass('base');
 
+            longbeach_outline = L.geoJson(longBeach, {
+                style: function() {
+                    return {
+                        weight: 5,
+                    color: '#7B4F00',
+                    opacity: 0.6,
+                    fillColor: 'rgb(137,101,178)',
+                    fillOpacity: 0
+                    }
+                }
+            }).addTo(map);
+
             longbeach = L.geoJson(longBeach, {
                 style: function() {
                     return {
@@ -115,7 +127,6 @@ cartodb.createVis('map', 'js/viz.json', {
                 $('.cartodb-legend').hide();
                 $('.leaflet-control-layers').hide();
             });
-
 
             // Allow maximum of one contextual layer at once:
             $("div.cartodb-layer-selector-box li:contains('Gentrified Areas')").on("click", function() {
