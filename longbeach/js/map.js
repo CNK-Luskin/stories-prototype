@@ -34,29 +34,29 @@ cartodb.createVis('map', 'js/viz.json', {
                      }).addTo(map);
             $(carto.getContainer()).addClass('base');
 
-            longbeach_outline = L.geoJson(longBeach, {
-                style: function() {
-                    return {
-                        weight: 5,
-                    color: '#7B4F00',
-                    opacity: 0.6,
-                    fillColor: 'rgb(137,101,178)',
-                    fillOpacity: 0
-                    }
-                }
-            }).addTo(map);
+            // longbeach_outline = L.geoJson(longBeach, {
+            //     style: function() {
+            //         return {
+            //             weight: 5,
+            //         color: '#7B4F00',
+            //         opacity: 0.6,
+            //         fillColor: 'rgb(137,101,178)',
+            //         fillOpacity: 0
+            //         }
+            //     }
+            // }).addTo(map);
 
-            longbeach = L.geoJson(longBeach, {
-                style: function() {
-                    return {
-                        weight: 3,
-                    color: '#DDA221',
-                    opacity: 1,
-                    fillColor: 'rgb(137,101,178)',
-                    fillOpacity: 0
-                    }
-                }
-            }).addTo(map);
+            // longbeach = L.geoJson(longBeach, {
+            //     style: function() {
+            //         return {
+            //             weight: 3,
+            //         color: '#DDA221',
+            //         opacity: 1,
+            //         fillColor: 'rgb(137,101,178)',
+            //         fillOpacity: 0
+            //         }
+            //     }
+            // }).addTo(map);
 
             var baselayers = {"Satellite": imagery,
                                 "Map": carto
@@ -79,7 +79,8 @@ cartodb.createVis('map', 'js/viz.json', {
             // Set infowindow
             var gentrificationlayer = layers[1].getSubLayer(0);
             var landuselayer = layers[1].getSubLayer(1);
-            var storieslayer = layers[1].getSubLayer(2);
+            var boundarylayer = layers[1].getSubLayer(2);
+            var storieslayer = layers[1].getSubLayer(3);
             storieslayer.setInteraction(true);
             storieslayer.setInteractivity('cartodb_id,name,textshort,textlong,lat,lng,'+
                                             'videocap,videourl,videoframe,audiocap,audiourl,audioframe,'+

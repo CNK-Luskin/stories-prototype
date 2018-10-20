@@ -127,6 +127,35 @@ vizjson({
                      }
                   },
                   {  
+                     "id":"0eb04793-1a7b-4287-89d7-7019ba99e2da",
+                     "type":"CartoDB",
+                     "infowindow":{  
+                        "template_name":"none",
+                        "maxHeight":180,
+                        "template":"\u003cdiv class=\"cartodb-popup v2\"\u003e\n  \u003ca href=\"#close\" class=\"cartodb-popup-close-button close\"\u003ex\u003c/a\u003e\n  \u003cdiv class=\"cartodb-popup-content-wrapper\"\u003e\n    \u003cdiv class=\"cartodb-popup-content\"\u003e\n    \u003c/div\u003e\n  \u003c/div\u003e\n  \u003cdiv class=\"cartodb-popup-tip-container\"\u003e\u003c/div\u003e\n\u003c/div\u003e",
+                        "alternative_names":{  
+
+                        },
+                        "fields":null,
+                        "width":226
+                     },
+                     "tooltip":{  
+                        "template_name":"none",
+                        "template":"\u003cdiv class=\"cartodb-tooltip-content-wrapper\"\u003e\n  \u003cdiv class=\"cartodb-tooltip-content\"\u003e\n  \u003c/div\u003e\n\u003c/div\u003e"
+                     },
+                     "legend":null,
+                     "order":3,
+                     "visible":true,
+                     "options":{  
+                        "layer_name":"Area Boundary",
+                        "cartocss":"#layer {\n  polygon-fill: #826dba;\n  polygon-opacity: 0;\n}\n#layer::outline {\n  line-width: 5;\n  line-color: #7B4F00;\n  line-opacity: 0.5;\n}\n#layer::halo {\n  line-width: 3;\n  line-color: #DDA221;\n  line-opacity: 1;\n}",
+                        "cartocss_version":"2.1.1",
+                        "interactivity":"",
+                        "sql":"SELECT * FROM long_beach",
+                        "table_name":"\"\"."
+                     }
+                  },
+                  {  
                      "id":"4746ce42-462a-4b77-a9bc-85385d2303d6",
                      "type":"CartoDB",
                      "infowindow":{  
@@ -238,7 +267,7 @@ vizjson({
                         "template":"<div class=\"cartodb-tooltip-content-wrapper\">\n  <div class=\"cartodb-tooltip-content\">\n  </div>\n</div>"
                      },
                      "legend":null,
-                     "order":3,
+                     "order":4,
                      "visible":true,
                      "options":{  
                         "layer_name":"Stories",
