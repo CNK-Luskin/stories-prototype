@@ -3,7 +3,7 @@
 vizjson({  
    "id":"664b2ba5-b804-4fd8-b734-c813d78242de",
    "version":"0.1.0",
-   "title":"long_beach_stories_data map",
+   "title":"boyle_heights_stories_data map",
    "likes":0,
    "description":null,
    "scrollwheel":true,
@@ -151,7 +151,7 @@ vizjson({
                         "cartocss":"#layer {\n  polygon-fill: #826dba;\n  polygon-opacity: 0;\n}\n#layer::outline {\n  line-width: 5;\n  line-color: #7B4F00;\n  line-opacity: 0.5;\n}\n#layer::halo {\n  line-width: 3;\n  line-color: #DDA221;\n  line-opacity: 1;\n}",
                         "cartocss_version":"2.1.1",
                         "interactivity":"",
-                        "sql":"SELECT * FROM long_beach",
+                        "sql":"SELECT * FROM boyle_heights",
                         "table_name":"\"\"."
                      }
                   },
@@ -274,7 +274,7 @@ vizjson({
                         "cartocss":"#layer {\n  marker-width: 40;\n  marker-fill: #DDA221;\n  marker-fill-opacity: 1;\n  marker-file: url('https://s3.amazonaws.com/com.cartodb.users-assets.production/maki-icons/marker-18.svg');\n  marker-allow-overlap: true;\n  marker-line-width: 0.75;\n  marker-line-color: #7B4F00;\n  marker-line-opacity: 3;\n}",
                         "cartocss_version":"2.1.1",
                         "interactivity":"cartodb_id",
-                        "sql":"SELECT * FROM long_beach_stories_data",
+                        "sql":"SELECT * FROM boyle_heights_stories_data",
                         "table_name":"\"\"."
                      }
                   }
