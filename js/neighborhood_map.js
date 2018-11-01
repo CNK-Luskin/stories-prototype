@@ -1,4 +1,4 @@
-cartodb.createVis('map', 'js/viz.json', {
+cartodb.createVis('map', vizPath, { // path set in index
             shareable: false, 
             search: false,
             infowindow: true,
@@ -7,8 +7,8 @@ cartodb.createVis('map', 'js/viz.json', {
             loaderControl: false,
             layer_selector: true,
             detectRetina: true,
-            center_lat: 33.78,
-            center_lon: -118.19,
+            center_lat: lat, // var set in index
+            center_lon: lon, // var set in index
             https: true,
             zoom: 13
         }).on('done', function(vis,layers) {
@@ -33,30 +33,6 @@ cartodb.createVis('map', 'js/viz.json', {
                     zIndex:-1
                      }).addTo(map);
             $(carto.getContainer()).addClass('base');
-
-            // longbeach_outline = L.geoJson(longBeach, {
-            //     style: function() {
-            //         return {
-            //             weight: 5,
-            //         color: '#7B4F00',
-            //         opacity: 0.6,
-            //         fillColor: 'rgb(137,101,178)',
-            //         fillOpacity: 0
-            //         }
-            //     }
-            // }).addTo(map);
-
-            // longbeach = L.geoJson(longBeach, {
-            //     style: function() {
-            //         return {
-            //             weight: 3,
-            //         color: '#DDA221',
-            //         opacity: 1,
-            //         fillColor: 'rgb(137,101,178)',
-            //         fillOpacity: 0
-            //         }
-            //     }
-            // }).addTo(map);
 
             var baselayers = {"Satellite": imagery,
                                 "Map": carto
