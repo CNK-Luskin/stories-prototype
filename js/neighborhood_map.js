@@ -1,3 +1,43 @@
+// HTML Templates:
+
+const infowindowHTML = `<div class="cartodb-popup v2">
+      <a href="#close" onclick="showLegend();" class="cartodb-popup-close-button close">x</a>
+          <div class="cartodb-popup-content-wrapper">
+            <div class="cartodb-popup-content">
+                <h2 style="color: #DDA221; line-height:1.5;"> {{name}} </h2> 
+                <h3><a href="http://maps.google.com/maps?q=&layer=c&cbll={{lat}},{{lng}}" target="_blank"> 
+                    {{address}} </a>
+                </h3>
+                    <hr style="height:0px; visibility:hidden;" />
+                <p> {{{textlong}}} </p>
+                    <hr style="height:0px; visibility:hidden;" />
+                <div class="popup-media-wrapper">
+                    <div class="popup-media">
+                        {{{videoframe}}}
+                        <em> {{videocap}} </em>
+                    </div>
+                    <div class="popup-media">
+                        {{{audioframe}}}
+                        <em> {{audiocap}} </em>
+                    </div>
+                    <div class="popup-media">
+                        {{{photoreelframe}}}
+                    </div>
+                </div>
+            </div>
+          </div>
+      <div class="cartodb-popup-tip-container"></div>
+    </div>`;
+
+const hoverHTML = `<div class="cartodb-tooltip-content-wrapper">
+        <div class="cartodb-tooltip-content">
+            <h3 style="color: #DDA221;">{{name}}</h3>
+            <p>{{textshort}}</p>
+        </div>
+    </div>`;
+
+// Map Implementation:
+
 cartodb.createVis('map', '../js/viz.json', { // path set in index
             shareable: false, 
             search: false,
@@ -64,7 +104,7 @@ cartodb.createVis('map', '../js/viz.json', { // path set in index
                                             'photoreelcap,photoreelurl,photoreelframe');
 
             storieslayer.infowindow.set('sanitizeTemplate',false);
-            storieslayer.infowindow.set('template', $('#infowindow_template').html());
+            storieslayer.infowindow.set('template', infowindowHTML);
 
             layers[1].on("load", function() {
                 if (!gentrificationlayer.isVisible()) {
@@ -93,7 +133,7 @@ cartodb.createVis('map', '../js/viz.json', { // path set in index
             vis.addOverlay({
                   type: 'tooltip',
                   layer: storieslayer,
-                  template: $('#hover_template').html(),
+                  template: hoverHTML,
                   position: 'top|right',
                   fields: [{name: 'name', textshort: 'textshort'}]
                 }); 
@@ -126,6 +166,8 @@ cartodb.createVis('map', '../js/viz.json', { // path set in index
         }).on('error', function() {
             console.log("some error occurred");
     });
+
+// Helper Functions:
 
 function showLegend() {
     $('.cartodb-legend').show();
