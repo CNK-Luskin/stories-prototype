@@ -1,4 +1,4 @@
-cartodb.createVis('map', vizPath, { // path set in index
+cartodb.createVis('map', '../js/viz.json', { // path set in index
             shareable: false, 
             search: false,
             infowindow: true,
