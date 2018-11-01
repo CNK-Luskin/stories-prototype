@@ -90,7 +90,7 @@ vizjson({
                      "visible":true,
                      "options":{  
                         "layer_name":"Gentrified Areas",
-                        "cartocss":"#layer {\n  polygon-fill: ramp([gentrify], (#ffffff, #fcedb4, #3e7bb6, #229a00, #ff2900, #ffffff), (null, \"Vulnerable, Did Not Gentrify\", \"Gentrified 2000-2013 Only\", \"Gentrified 1990-2000 Only\", \"Gentrified Both Decades\", ), \"=\");\n  polygon-opacity: 0.5;\n}\n#layer::outline {\n  line-width: 1;\n  line-color: #FFFFFF;\n  line-opacity: 0;\n}",
+                        "cartocss":"#layer {\n  polygon-fill: ramp([gentrify], (#ffffff, #fcedb4, #3e7bb6, #229a00, #ff2900, #ffffff), (null, \"Vulnerable, Did Not Gentrify\", \"Gentrified 2000-2013 Only\", \"Gentrified 1990-2000 Only\", \"Gentrified Both Decades\", ), \"=\");\n  polygon-opacity: 0.3;\n}\n#layer::outline {\n  line-width: 1;\n  line-color: #FFFFFF;\n  line-opacity: 0;\n}",
                         "cartocss_version":"2.1.1",
                         "interactivity":"",
                         "sql":"SELECT * FROM revised_gentri_merge",
