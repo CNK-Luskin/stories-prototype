@@ -9,21 +9,13 @@ html, body, #map {
 	font-family: 'Nunito Sans', sans-serif !important;
 }
 
-#topBanner {
-	height: 65px;
-	background-color: #043361;
-	margin: 0;
-	padding: 0;
-	text-align: center;
-}
-
 #map {
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 	margin-left: 0;
 	margin-right: 0;
 	width: 100%;
-	height: calc(100vh - 65px);
+	height: 100vh;
 	padding: 0;
 	position: relative;
 }
