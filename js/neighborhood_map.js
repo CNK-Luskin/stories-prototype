@@ -50,6 +50,7 @@ cartodb.createVis('map', '../js/viz.json', { // path set in index
             center_lat: lat, // var set in index
             center_lon: lon, // var set in index
             https: true,
+            cartodb_logo: false,
             zoom: 13
         }).on('done', function(vis,layers) {
             // Get the "native" Leaflet map
@@ -159,6 +160,14 @@ cartodb.createVis('map', '../js/viz.json', { // path set in index
                      $("a.layer:contains('Gentrified Areas')")[0].click();
                  }
              });
+
+            $('#project-info-button').click(function(){
+                $.pgwModal({
+                    target: '#modalContent',
+                    title: 'ABOUT THIS PROJECT',
+                    maxWidth: 800
+                });
+            });
 
             // Change layer control text:
             // $('a.layers').html($('a.layers').html().replace('Visible layers','Toggle Layers'));

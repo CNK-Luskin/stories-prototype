@@ -13,11 +13,8 @@
 	   	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	 	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.0-beta.2/leaflet.js"></script>
 
-	 	<script> 
-	    $(function(){
-	      $('#map').load('../html/neighborhood_map.html'); 
-	    });
-</script> 
+	 	<link href="lib/pgwmodal/pgwmodal.min.css" rel="stylesheet">
+		<script src="lib/pgwmodal/pgwmodal.min.js"></script>
 
 	</head>
 
@@ -28,9 +25,16 @@
 				<button id="boyle_heights" class="selector-button right-button">Boyle Heights</button>
 			</div>
 		<div id="mainmap">
+
 			<div id="about-bh" class="about-page"></div>
 	    	<div id="about-lb" class="about-page"></div>
 	    	<div id="about-sla" class="about-page"></div>
+
+	    	<button id="project-info-button">About this Project</button>
+	    	<div id="modalContent" style="display: none;">
+			    <p>This is a mapping project...</p>
+			</div>
+
 		</div>
 
 	<!-- BOYLE HEIGHTS ABOUT PAGE --> 

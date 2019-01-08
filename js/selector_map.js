@@ -167,6 +167,16 @@ $('#south_la').hover(function(){
                         toggleMapInteraction();
                     });
 
+$('#project-info-button').click(function(){
+    $.pgwModal({
+        target: '#modalContent',
+        title: 'ABOUT THIS PROJECT',
+        maxWidth: 800
+    });
+});
+
+
+
 // MAP DATA
 
 function style(feature) {
