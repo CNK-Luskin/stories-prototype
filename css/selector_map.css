@@ -247,21 +247,22 @@ b {
 
 #project-info-button {
     position: absolute;
-    bottom: 25px;
-    left: 4%;
+    bottom: 15px;
+    left: 15px;
+    width: 33.5px;
+    height: 33.5px;
     border: none !important;
     box-shadow: 0 1px 5px rgba(0,0,0,.65) !important;
     z-index: 501 !important;
-    color: #666;
+    color: #000;
     border-radius: 4px;
-    font-size: 13px;
     padding: 5px 8px;
     line-height: 20px;
-    font-size: 13px;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 #project-info-button:hover {
-    color: #666 !important;
     background-color: #f4f4f4;
     display: block;
     border-radius: 4px;
