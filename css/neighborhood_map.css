@@ -168,6 +168,29 @@ div.cartodb-popup .popup-footer {
     font-size: 13px;
 }
 
+#map #project-info-button {
+    position: absolute;
+    top: 95px;
+    left: 10px;
+    width: 33.5px;
+    height: 33.5px;
+    border: none !important;
+    box-shadow: 0 1px 5px rgba(0,0,0,.65) !important;
+    z-index: 501 !important;
+    color: #000;
+    border-radius: 4px;
+    padding: 5px 8px;
+    line-height: 20px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#map #project-info-button:hover {
+    background-color: #f4f4f4;
+    display: block;
+    border-radius: 4px;
+}
+
 div.cartodb-layer-selector-box div.cartodb-dropdown {
 	border: none;
 	box-shadow: 0 1px 5px rgba(0,0,0,.65);
