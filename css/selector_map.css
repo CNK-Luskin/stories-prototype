@@ -36,7 +36,6 @@ b {
     letter-spacing: 0;
 }
 
-
 .resp-container {
     position: relative;
     overflow: hidden; 
@@ -334,4 +333,27 @@ b {
         height: 80px;
     }
 
+}
+
+/* overrides */
+
+.pgwModal .pm-content {
+    padding: 10px 20px 20px 20px !important;
+    color: #47473e !important;
+}
+
+.pgwModal .pm-content a {
+    color: #47473e !important;
+}
+
+.pgwModal .pm-content a:hover {
+    color: #DDA221 !important;
+}
+
+.pgwModal .pm-title {
+    background-color: #DDA221 !important;
+    color: white !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.7 !important;
+    line-height: 1.6 !important;
 }
