@@ -261,6 +261,12 @@ div.cartodb-legend {
     margin-bottom: -60px;
 }
 
+#map .photoreel-container {
+	position: relative;
+    overflow: hidden; 
+    padding-top: calc(56.25% + 60px);
+}
+
 #map .audio-container {
     position: relative;
     overflow: hidden; 

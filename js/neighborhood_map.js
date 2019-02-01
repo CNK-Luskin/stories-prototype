@@ -14,14 +14,15 @@ const infowindowHTML = `<div class="cartodb-popup v2">
                 <div class="popup-media-wrapper">
                     <div class="popup-media">
                         {{{videoframe}}}
-                        <em> {{videocap}} </em>
                     </div>
                     <div class="popup-media">
                         {{{audioframe}}}
-                        <em> {{audiocap}} </em>
                     </div>
                     <div class="popup-media">
                         {{{photoreelframe}}}
+                    </div>
+                    <div class="popup-media">
+                        {{{singlephotoframe}}}
                     </div>
                 </div>
             </div>
